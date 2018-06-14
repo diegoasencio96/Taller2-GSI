@@ -67,7 +67,7 @@ public class Ventana1Controlador implements ActionListener {
                     sol = true;
                 }
             }
-        }
+        } 
         
         posModelIn.close();
         is1.close();
