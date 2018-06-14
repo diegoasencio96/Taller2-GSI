@@ -5,6 +5,7 @@
  */
 package principal;
 
+import controlador.Ventana1Controlador;
 import vista.Ventana1;
 
 /**
@@ -14,6 +15,7 @@ import vista.Ventana1;
 public class Principal {
     
     public static void main(String[]args) {
-        new Ventana1();
+        Ventana1 v1 = new Ventana1();
+        Ventana1Controlador v1c = new Ventana1Controlador(v1);
     }
 }
