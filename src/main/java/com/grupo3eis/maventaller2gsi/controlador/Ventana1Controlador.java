@@ -72,10 +72,10 @@ public class Ventana1Controlador implements ActionListener {
         posModelIn.close();
         is1.close();
         if(sol) {
-            JOptionPane.showMessageDialog(null, "Activo");
+            //JOptionPane.showMessageDialog(null, "Activo");
             return "activo";
         }else {
-            JOptionPane.showMessageDialog(null, "Pasivo");
+            //JOptionPane.showMessageDialog(null, "Pasivo");
             return "pasivo";
         }
     }

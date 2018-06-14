@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.grupo3eis.maventaller2gsi.controlador.Ventana1ControladorTest" time="3.391" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.grupo3eis.maventaller2gsi.controlador.Ventana1ControladorTest" time="2.354" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Especializacion en Ingenieria de Software\Gestion de Software I\taller 2\Taller2-GSI\mavenTaller2GSI"/>
+    <property name="user.dir" value="D:\Especializacion en Ingenieria de Software\Gestion de Software I\taller 2\Taller2-GSI"/>
     <property name="java.runtime.version" value="1.8.0_111-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.grupo3eis.maventaller2gsi.controlador.Ventana1ControladorTest" name="testSentenceDetect" time="3.295"/>
+  <testcase classname="com.grupo3eis.maventaller2gsi.controlador.Ventana1ControladorTest" name="testSentenceDetect" time="2.25"/>
 </testsuite>
