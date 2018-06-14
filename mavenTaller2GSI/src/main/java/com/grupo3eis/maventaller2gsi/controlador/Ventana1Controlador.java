@@ -73,10 +73,10 @@ public class Ventana1Controlador implements ActionListener {
         is1.close();
         if(sol) {
             JOptionPane.showMessageDialog(null, "Activo");
-            return "Activo";
+            return "activo";
         }else {
             JOptionPane.showMessageDialog(null, "Pasivo");
-            return "Pasivo";
+            return "pasivo";
         }
     }
     
@@ -109,6 +109,10 @@ public class Ventana1Controlador implements ActionListener {
         sol[0] = abre.getAbsolutePath();
         sol[1] = texto;
         return sol;//El texto se almacena en el JTextArea
+    }
+    
+    public Ventana1Controlador() {
+        
     }
     
     public Ventana1Controlador(Ventana1 obj) {
