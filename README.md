@@ -30,13 +30,15 @@ Clonar el reposiorio de GitHub
 git clone https://github.com/diegoasencio96/Taller2-GSI.git
 ```
 
-And repeat
+Luego importar el proyecto desde NetBeans
 
-```
-until finished
-```
+![Importar proyecto desde NetBeans IDE](https://image.ibb.co/khmOZd/abrirproyecto.jpg)
 
-End with an example of getting some data out of the system or using it for a little demo
+
+Para finalizar, se debe ejecutar el proyecto con el boton (Run) y nos mostrará la ejecución del proyecto.
+
+![Ejecución del proyecto](https://image.ibb.co/maUXSy/proyecto1.jpg)
+
 
 ## Running the tests
 
