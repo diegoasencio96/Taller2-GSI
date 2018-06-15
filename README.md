@@ -1,30 +1,33 @@
 # Taller2-GSI
 
-Este proyecto tiene como proposito mostrar la configuración de un proyecto en JAVA con Maven, JUnit, GitHub y Travis Cli. El aplicativo en JAVA comprueba que una frase o un conjunto de frases en ingles sean de Tono Activo o Pasivo, para esta comprobación se hace uso de la librería de apache openNLP para JAVA. 
+Este proyecto tiene como proposito mostrar la configuración de un proyecto en JAVA con Maven, JUnit, GitHub y Travis Cli. El aplicativo en JAVA comprueba que una frase o un conjunto de frases en ingles sean de Tono Activo o Pasivo, para esta comprobación se hace uso de la librería de apache openNLP para JAVA la cual permite un procesamiento del lenguaje natural para cadenas de caracteres (textos). 
 
 (Códigos fuente del taller 2 realizado en clase del curso de Gestión de Software de la EIS).
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Antes de instalar y ejecutar el proyecto debes asegurar que tengas instalado los siguientes componentes de software:
 
 ```
-Give examples
+JAVA JDK8
+```
+```
+NetBeans 8.1 
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+La instalación del proyecto es muy sencilla, solo debes seguir los siguientes pasos:
 
-Say what the step will be
+Clonar el reposiorio de GitHub
 
 ```
-Give the example
+git clone https://github.com/diegoasencio96/Taller2-GSI.git
 ```
 
 And repeat
