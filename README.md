@@ -1,6 +1,6 @@
 # Taller2-GSI
 
-Este proyecto tiene como proposito mostrar la configuración de un proyecto en JAVA con Maven, JUnit, GitHub y Travis Cli. El aplicativo en JAVA comprueba que una frase o un conjunto de frases en ingles sean de Tono Activo o Pasivo.
+Este proyecto tiene como proposito mostrar la configuración de un proyecto en JAVA con Maven, JUnit, GitHub y Travis Cli. El aplicativo en JAVA comprueba que una frase o un conjunto de frases en ingles sean de Tono Activo o Pasivo, para esta comprobación se hace uso de la librería de apache openNLP para JAVA. 
 
 (Códigos fuente del taller 2 realizado en clase del curso de Gestión de Software de la EIS).
 
