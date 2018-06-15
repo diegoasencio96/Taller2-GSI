@@ -17,7 +17,7 @@ import javax.swing.JTextField;
  */
 public class Ventana1 extends JFrame {
     
-    public JLabel text, text2, ruta;
+    public JLabel text, text2, text3;
     public JButton baceptar, bcancelar, bbuscar;
     public JTextArea tffrase;
     
@@ -29,6 +29,7 @@ public class Ventana1 extends JFrame {
         //setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(600, 400);
+        setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
     }
@@ -58,22 +59,24 @@ public class Ventana1 extends JFrame {
         bbuscar.setToolTipText("Seleccionar archivos");
         bbuscar.setBounds(270, 190, 150, 30);
         
-        ruta = new JLabel();
-        ruta.setText("");
-        ruta.setBounds(10, 230, 580, 30);
-        
         
         text2 = new JLabel();
         text2.setText("La frase es de tipo: ");
         text2.setBounds(10, 270, 200, 30);
+        
+        text3 = new JLabel();
+        text3.setText("");
+        text3.setBounds(130, 270, 100, 30);
+        
+        
         
         add(text);
         add(tffrase);
         add(baceptar);
         add(bcancelar);
         add(bbuscar);
-        add(ruta);
         add(text2);
+        add(text3);
     }
     
     

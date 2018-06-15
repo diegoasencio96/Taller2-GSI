@@ -61,7 +61,7 @@ public class Ventana1Controlador implements ActionListener {
         
         boolean sol = false;
         for (int i=0;i<tags.length-1;i++) {
-            System.out.println(tags[i]);
+            //System.out.println(tags[i]);
             if(tags[i].equals("PRP")||tags[i].equals("NNP")||tags[i].equals("NNS")||tags[i].equals("WP")||tags[i].equals("NN")) {
                 if(tags[i+1].equals("VB")||tags[i+1].equals("VBD")||tags[i+1].equals("VBP")||tags[i+1].equals("VBN")) {
                     sol = true;
@@ -80,8 +80,8 @@ public class Ventana1Controlador implements ActionListener {
         }
     }
     
-    private String[] abrirArchivo() {
-        String[] sol = new String[2];
+    private String abrirArchivo() {
+        //String[] sol = new String[2];
         String aux="";   
         String texto="";
         File abre = null;
@@ -89,13 +89,17 @@ public class Ventana1Controlador implements ActionListener {
             JFileChooser file=new JFileChooser();
             file.showOpenDialog(obj);
             abre=file.getSelectedFile();
-
+            int c = 0;
             if(abre!=null) {     
+                JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
                FileReader archivos=new FileReader(abre);
                BufferedReader lee=new BufferedReader(archivos);
                while((aux=lee.readLine())!=null)
                {
-                  texto+= aux+ "\n";
+                  texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
+                  
+                  if (c > 10) break;
+                  c++;
                }
                   lee.close();
             }    
@@ -105,10 +109,10 @@ public class Ventana1Controlador implements ActionListener {
                        "ADVERTENCIA!!!",JOptionPane.WARNING_MESSAGE);
         }
         //JOptionPane.showMessageDialog(null, texto);
-        System.out.println(texto);
-        sol[0] = abre.getAbsolutePath();
-        sol[1] = texto;
-        return sol;//El texto se almacena en el JTextArea
+        //System.out.println(texto);
+        
+        JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
+        return texto;//El texto se almacena en el JTextArea
     }
     
     public Ventana1Controlador() {
@@ -131,21 +135,22 @@ public class Ventana1Controlador implements ActionListener {
                  JOptionPane.showMessageDialog(null, "No ha ingresado una frase. ");
             }else {
                 try {
-                    JOptionPane.showMessageDialog(null, "Comprobando frase -> "+obj.tffrase.getText());
-                    obj.text2.setText(sentenceDetect(obj.tffrase.getText()));
+                    //JOptionPane.showMessageDialog(null, "Comprobando frase -> "+obj.tffrase.getText());
+                    obj.text3.setText(sentenceDetect(obj.tffrase.getText()));
                 } catch (IOException ex) {
                     Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
         if(ae.getSource() == obj.bbuscar) {
-            String arc[]  = abrirArchivo();
-            if(arc[0] == null || arc[0].equals("")) {
+            String arc  = abrirArchivo();
+            if(arc == null || arc.equals("")) {
                 
             }else {
                 //obj.tffrase.setText(arc[1]);
-                obj.ruta.setText(arc[0]);
-                new Ventana2();
+              
+                Ventana2 v2 = new Ventana2();
+                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc);
             }
         }
     
