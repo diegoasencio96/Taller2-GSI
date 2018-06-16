@@ -1,4 +1,4 @@
-# Taller2-GSI [![Build Status](https://travis-ci.org/diegoasencio96/Taller2-GSI.svg?branch=master)](https://travis-ci.org/diegoasencio96/Taller2-GSI)
+# Taller2-GSI [![Build Status](https://travis-ci.org/diegoasencio96/Taller2-GSI.svg?branch=master)](https://travis-ci.org/diegoasencio96/Taller2-GSI) 
 
 Este proyecto tiene como proposito mostrar la configuración de un proyecto en JAVA con Maven, JUnit, GitHub y Travis Cli. El aplicativo en JAVA comprueba que una frase o un conjunto de frases en ingles sean de Tono Activo o Pasivo, para esta comprobación se hace uso de la librería de apache openNLP para JAVA la cual permite un procesamiento del lenguaje natural para cadenas de caracteres (textos). 
 
@@ -83,11 +83,19 @@ Usamos [GitHub](https://github.com/) para versionar. Para las versiones disponib
 * **Jorge Luis Hernandez** - *Integrante 2* - [jorgejlhc](https://github.com/jorgejlhc)
 * **Julian Ramos** - *Integrante 3* - [julian3493](https://github.com/julian3493)
 
+
+| <a href="https://github.com/diegoasencio96" target="_blank">Diego Asencio</a> | <a href="https://github.com/jorgejlhc" target="_blank">Jorge Hernandez</a> | <a href="https://github.com/julian3493" target="_blank">Julian Ramos</a> |
+| :---: |:---:| :---:|
+| [![Diego Asencio](https://avatars2.githubusercontent.com/u/24782779?s=200&v=4)](https://github.com/diegoasencio96)    | [![Jorge Hernandez](https://avatars1.githubusercontent.com/u/11539843?s=200&v=4)](https://github.com/jorgejlhc) | [![Julian Ramos](https://avatars3.githubusercontent.com/u/39846015?s=200&v=4)](https://github.com/julian3493)  |
+| <a href="http://github.com/diegoasencio96" target="_blank">`github.com/diegoasencio96`</a> | <a href="http://github.com/jorgejlhc" target="_blank">`github.com/jorgejlhc`</a> | <a href="http://github.com/julian3493" target="_blank">`github.com/julian3493`</a> |
+
+
 Ver también la lista de [contribuidores](https://github.com/diegoasencio96/Taller2-GSI/contributors) que participaron en este proyecto.
 
 
 ## Licencia
 
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 Este proyecto aun no tiene licencia.
 
 
