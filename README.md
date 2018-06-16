@@ -80,7 +80,7 @@ Usamos [GitHub](https://github.com/) para versionar. Para las versiones disponib
 ## Autores
 
 * **Diego A Asencio C** - *Integrante 1* - [diegoasencio96](https://github.com/diegoasencio96)
-* **Jorge ** - *Integrante 2* - [jorgejlhc](https://github.com/jorgejlhc)
+* **Jorge Luis Hernandez** - *Integrante 2* - [jorgejlhc](https://github.com/jorgejlhc)
 * **Julian Ramos** - *Integrante 3* - [julian3493](https://github.com/julian3493)
 
 Ver también la lista de [contribuidores](https://github.com/diegoasencio96/Taller2-GSI/contributors) que participaron en este proyecto.
