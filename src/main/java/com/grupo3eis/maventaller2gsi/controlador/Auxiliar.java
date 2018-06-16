@@ -5,12 +5,11 @@
  */
 package com.grupo3eis.maventaller2gsi.controlador;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.RecursiveTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 /**
  *
@@ -27,25 +26,31 @@ public class Auxiliar extends RecursiveTask<String>  {
         this.i = i;
         this.f = f;
     }
+    
+    
 
     @Override
     protected String compute() {
-        if(f - i <= 10) {
+        if(f - i <= 5) {
+            //System.out.println("aca 1");
             String t = "";
             for(int i = this.i; i < this.f; i++) {
                 try {
-                    t += (arr.get(i)+"-"+v1c.sentenceDetect(arr.get(i))+ "\n");
-                } catch (IOException ex) {
+                    t += (arr.get(i)+"-----"+v1c.sentenceDetect(arr.get(i))+ "\n");
+                } catch (Exception ex) {
                     Logger.getLogger(Auxiliar.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             return t;
-        } else {	    	
+        } else {	
+            //System.out.println("aca 2");
             int mid = this.i + (this.f - this.i) / 2;
             Auxiliar left  = new Auxiliar(v1c, arr, this.i, mid);
             Auxiliar right = new Auxiliar(v1c, arr, mid, this.f);
             left.fork();
+            //right.fork();
             String rightResult = right.compute();
+            //String rightResult = right.join();
             String leftResult  = left.join();
             return leftResult + rightResult;
          }
