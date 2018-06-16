@@ -76,16 +76,16 @@ public class Ventana1Controlador implements ActionListener {
             Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
              if (formasToBe.matches()) {
                  
-                 Matcher verbos = tagsVerbos.matcher(tokens[i]);
+                 Matcher verbos = tagsVerbos.matcher(tags[i+1]);
                  if (verbos.matches()) {
                      
-                     Matcher preposiciones = tagsPrepos.matcher(tokens[i]);
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+2]);
                      if (preposiciones.matches()) {
                          sol = false;
                     }
                 }
                  else{
-                     Matcher preposiciones = tagsPrepos.matcher(tokens[i]);
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+3]);
                      if (preposiciones.matches()) {
                          sol = false;
                     }
