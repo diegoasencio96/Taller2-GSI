@@ -67,7 +67,7 @@ public class Ventana1Controlador implements ActionListener {
         
         //Declaración de las expresiones irregulares
         Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
-        Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$");
+        Pattern tagsVerbos = Pattern.compile("^V");
         Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
         
         // Validar voz pasiva (to be + verbo)
