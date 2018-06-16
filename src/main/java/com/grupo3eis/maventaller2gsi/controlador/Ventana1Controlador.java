@@ -31,6 +31,8 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 import com.grupo3eis.maventaller2gsi.vista.Ventana1;
 import com.grupo3eis.maventaller2gsi.vista.Ventana2;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -62,22 +64,33 @@ public class Ventana1Controlador implements ActionListener {
 	String tags[] = posTagger.tag(tokens);
         
         boolean sol = true;
-
+        
+        //Declaración de las expresiones irregulares
+        Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
+        Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$");
+        Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
+        
         // Validar voz pasiva (to be + verbo)
         for (int i=0;i<tags.length-3;i++) {
-            //System.out.println(tags[i]);
-            if(tokens[i].equals("is")||tokens[i].equals("were")||tokens[i].equals("was")||tokens[i].equals("be")||tokens[i].equals("are")||tokens[i].equals("been")) {
-                if(tags[i+1].equals("VB")||tags[i+1].equals("VBD")||tags[i+1].equals("VBP")||tags[i+1].equals("VBN")||tags[i+1].equals("VBZ")) {
-                    if(tokens[i+2].equals("by")||tokens[i+2].equals("on")||tokens[i+2].equals("to")){
-                        sol = false;
+            
+            Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
+             if (formasToBe.matches()) {
+                 
+                 Matcher verbos = tagsVerbos.matcher(tokens[i]);
+                 if (verbos.matches()) {
+                     
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i]);
+                     if (preposiciones.matches()) {
+                         sol = false;
                     }
                 }
-                else{
-                    if(tokens[i+3].equals("by")||tokens[i+2].equals("on")||tokens[i+2].equals("to")){
-                        sol = false;
+                 else{
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i]);
+                     if (preposiciones.matches()) {
+                         sol = false;
                     }
-                }
-            }
+                 }
+            }                                   
         } 
         posModelIn.close();
         is1.close();
@@ -103,15 +116,13 @@ public class Ventana1Controlador implements ActionListener {
             if(abre!=null) {     
                 JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
                
-                FileReader archivos=new FileReader(abre);
+               FileReader archivos=new FileReader(abre);
                BufferedReader lee=new BufferedReader(archivos);
                tinicio = System.currentTimeMillis();
                while((aux=lee.readLine())!=null)
                {
                   texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
                   
-                  if (c > 10) break;
-                  c++;
                }
                   lee.close();
             }    
