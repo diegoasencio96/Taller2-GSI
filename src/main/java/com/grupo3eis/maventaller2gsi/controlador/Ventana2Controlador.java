@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -19,17 +20,19 @@ import javax.swing.table.DefaultTableModel;
  * @author lenovo-G40
  */
 public class Ventana2Controlador implements ActionListener {
-    
+    JLabel ltiempo;
     public JScrollPane scroll;
     public JTable tabla;
     public String res;
     public DefaultTableModel modelo;
     
-    public Ventana2Controlador(Ventana2 v2, String res) {
+    public Ventana2Controlador(Ventana2 v2, String res, long tiempo) {
         this.scroll = v2.scroll;
         this.tabla = v2.tabla;
+        this.ltiempo = v2.ltiempo;
         this.res = res;
         
+        ltiempo.setText(ltiempo.getText()+" "+Long.toString(tiempo)+" seg");
         Vector columnas = new Vector();
         columnas.add("Frase en ingles");
         columnas.add("Resultado");

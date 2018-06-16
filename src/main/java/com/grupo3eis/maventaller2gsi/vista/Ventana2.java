@@ -18,7 +18,7 @@ import javax.swing.JTable;
  */
 public class Ventana2 extends JFrame {
     
-    public JLabel text;
+    public JLabel text, ltiempo;
     public JTable tabla;
     public JScrollPane scroll;
     
@@ -46,9 +46,13 @@ public class Ventana2 extends JFrame {
         scroll = new JScrollPane(tabla);
         scroll.setBounds(10, 50, 670, 400);
        
+        ltiempo = new JLabel();
+        ltiempo.setText("Tiempo de ejecucion en segundos: ");
+        ltiempo.setBounds(10, 480, 250, 30);
         
         add(text);
         add(scroll);
+        add(ltiempo);
 
     }
     

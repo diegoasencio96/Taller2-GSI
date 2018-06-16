@@ -39,6 +39,8 @@ import com.grupo3eis.maventaller2gsi.vista.Ventana2;
 public class Ventana1Controlador implements ActionListener {
     
     private Ventana1 obj;
+    private long tfinal;
+    private long tinicio;
     
     
     public String sentenceDetect(String paragraph) throws InvalidFormatException, IOException {
@@ -63,7 +65,7 @@ public class Ventana1Controlador implements ActionListener {
 
         // Validar voz pasiva (to be + verbo)
         for (int i=0;i<tags.length-3;i++) {
-            System.out.println(tags[i]);
+            //System.out.println(tags[i]);
             if(tokens[i].equals("is")||tokens[i].equals("were")||tokens[i].equals("was")||tokens[i].equals("be")||tokens[i].equals("are")||tokens[i].equals("been")) {
                 if(tags[i+1].equals("VB")||tags[i+1].equals("VBD")||tags[i+1].equals("VBP")||tags[i+1].equals("VBN")||tags[i+1].equals("VBZ")) {
                     if(tokens[i+2].equals("by")||tokens[i+2].equals("on")||tokens[i+2].equals("to")){
@@ -100,14 +102,16 @@ public class Ventana1Controlador implements ActionListener {
             int c = 0;
             if(abre!=null) {     
                 JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
-               FileReader archivos=new FileReader(abre);
+               
+                FileReader archivos=new FileReader(abre);
                BufferedReader lee=new BufferedReader(archivos);
+               tinicio = System.currentTimeMillis();
                while((aux=lee.readLine())!=null)
                {
                   texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
                   
-                  //if (c < 0) break;
-                  //c++;
+                  if (c > 10) break;
+                  c++;
                }
                   lee.close();
             }    
@@ -118,7 +122,7 @@ public class Ventana1Controlador implements ActionListener {
         }
         //JOptionPane.showMessageDialog(null, texto);
         //System.out.println(texto);
-        
+        tfinal = System.currentTimeMillis();
         JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
         return texto;//El texto se almacena en el JTextArea
     }
@@ -129,7 +133,6 @@ public class Ventana1Controlador implements ActionListener {
     
     public Ventana1Controlador(Ventana1 obj) {
         this.obj=obj;
-        this.obj.baceptar.addActionListener(this);
         this.obj.baceptar.addActionListener(this);
         this.obj.bbuscar.addActionListener(this);
        // this.obj.tffrase.setText("This is a statement. This is another statement. Now is an abstract word for time, that is always flying.");
@@ -158,7 +161,7 @@ public class Ventana1Controlador implements ActionListener {
                 //obj.tffrase.setText(arc[1]);
               
                 Ventana2 v2 = new Ventana2();
-                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc);
+                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal-tinicio)/1000);
             }
         }
     
