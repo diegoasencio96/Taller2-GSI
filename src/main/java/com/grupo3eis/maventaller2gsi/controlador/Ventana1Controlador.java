@@ -60,19 +60,11 @@ public class Ventana1Controlador implements ActionListener {
 	String tags[] = posTagger.tag(tokens);
         
         boolean sol = true;
-        System.out.println(tags[0]);
-        for (int i=0;i<tags.length-1;i++) {
-            //System.out.println(tags[i]);
-            if(tags[i].equals("PRP")||tags[i].equals("NNP")||tags[i].equals("NNS")||tags[i].equals("WP")||tags[i].equals("NN")) {
-                if(tags[i+1].equals("VB")||tags[i+1].equals("VBD")||tags[i+1].equals("VBP")||tags[i+1].equals("VBN")||tags[i+1].equals("VBZ")||tags[i+1].equals("MD")) {
-                    sol = true;
-                }
-            }
-        } 
+
         // Validar voz pasiva (to be + verbo)
         for (int i=0;i<tags.length-3;i++) {
             System.out.println(tags[i]);
-            if(tokens[i].equals("is")||tokens[i].equals("were")||tokens[i].equals("was")||tokens[i].equals("be")||tokens[i].equals("are")) {
+            if(tokens[i].equals("is")||tokens[i].equals("were")||tokens[i].equals("was")||tokens[i].equals("be")||tokens[i].equals("are")||tokens[i].equals("been")) {
                 if(tags[i+1].equals("VB")||tags[i+1].equals("VBD")||tags[i+1].equals("VBP")||tags[i+1].equals("VBN")||tags[i+1].equals("VBZ")) {
                     if(tokens[i+2].equals("by")||tokens[i+2].equals("on")||tokens[i+2].equals("to")){
                         sol = false;
@@ -114,8 +106,8 @@ public class Ventana1Controlador implements ActionListener {
                {
                   texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
                   
-                  if (c < 0) break;
-                  c++;
+                  //if (c < 0) break;
+                  //c++;
                }
                   lee.close();
             }    
