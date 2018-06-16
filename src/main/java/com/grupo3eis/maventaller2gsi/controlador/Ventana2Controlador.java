@@ -43,8 +43,8 @@ public class Ventana2Controlador implements ActionListener {
         
         for(int i=0;i<aux.length;i++) {
             Vector fila = new Vector();
-            fila.add(aux[i].split("-")[0]);
-            fila.add(aux[i].split("-")[1]);
+            fila.add(aux[i].split("-----")[0]);
+            fila.add(aux[i].split("-----")[1]);
             modelo.insertRow(modelo.getRowCount(),fila);
         }
         
