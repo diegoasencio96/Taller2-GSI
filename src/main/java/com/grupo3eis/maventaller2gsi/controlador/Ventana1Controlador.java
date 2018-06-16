@@ -31,6 +31,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 import com.grupo3eis.maventaller2gsi.vista.Ventana1;
 import com.grupo3eis.maventaller2gsi.vista.Ventana2;
+import java.util.concurrent.ForkJoinPool;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,6 +44,7 @@ public class Ventana1Controlador implements ActionListener {
     private Ventana1 obj;
     private long tfinal;
     private long tinicio;
+    private ForkJoinPool forkJoinPool;
     
     
     public String sentenceDetect(String paragraph) throws InvalidFormatException, IOException {
@@ -67,7 +69,7 @@ public class Ventana1Controlador implements ActionListener {
         
         //Declaración de las expresiones irregulares
         Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
-        Pattern tagsVerbos = Pattern.compile("^V");
+        Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$|");
         Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
         
         // Validar voz pasiva (to be + verbo)
@@ -114,17 +116,28 @@ public class Ventana1Controlador implements ActionListener {
             abre=file.getSelectedFile();
             int c = 0;
             if(abre!=null) {     
-                JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
+               JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
                
                FileReader archivos=new FileReader(abre);
                BufferedReader lee=new BufferedReader(archivos);
                tinicio = System.currentTimeMillis();
+               ArrayList<String> arr = new ArrayList();
                while((aux=lee.readLine())!=null)
                {
-                  texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
-                  
+                   arr.add(aux);
                }
-                  lee.close();
+               lee.close();
+               String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
+               texto = result;
+               /*while((aux=lee.readLine())!=null)
+               {
+                   
+                   //System.out.println(result);
+                   texto += result;
+                   //texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
+               }
+                  lee.close();*/
+               
             }    
         }catch(IOException ex) {
             JOptionPane.showMessageDialog(null,ex+"" +
@@ -148,6 +161,10 @@ public class Ventana1Controlador implements ActionListener {
         this.obj.bbuscar.addActionListener(this);
        // this.obj.tffrase.setText("This is a statement. This is another statement. Now is an abstract word for time, that is always flying.");
         this.obj.tffrase.setText("John is 27 years old.");
+        int nThreads = Runtime.getRuntime().availableProcessors();
+        System.out.println("Numero de Procesadores: "+nThreads);
+        forkJoinPool = new ForkJoinPool(nThreads);
+        
     }
 
     @Override
