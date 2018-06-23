@@ -31,6 +31,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 import com.grupo3eis.maventaller2gsi.vista.Ventana1;
 import com.grupo3eis.maventaller2gsi.vista.Ventana2;
+import java.io.FileNotFoundException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -135,7 +136,35 @@ public class Ventana1Controlador implements ActionListener {
     }
     
     public Ventana1Controlador() {
-        
+        FileInputStream is1 = null;
+        try {
+            int nThreads = Runtime.getRuntime().availableProcessors();
+            System.out.println("Numero de Procesadores: "+nThreads);
+            forkJoinPool = new ForkJoinPool(nThreads);
+            //String sentence = "John is 27 years old.";
+            is1 = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-token.bin");
+            TokenizerModel tokenModel = new TokenizerModel(is1);
+            tokenizer = new TokenizerME(tokenModel);
+            // Parts-Of-Speech Tagging
+            // reading parts-of-speech model to a stream 
+            InputStream posModelIn = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-pos-maxent.bin");
+            // loading the parts-of-speech model from stream
+            posModel = new POSModel(posModelIn);
+            // initializing the parts-of-speech tagger with model 
+            posTagger = new POSTaggerME(posModel);
+            posModelIn.close();
+            is1.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                is1.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
     
     public Ventana1Controlador(Ventana1 obj) {
@@ -187,8 +216,6 @@ public class Ventana1Controlador implements ActionListener {
             if(arc == null || arc.equals("")) {
                  JOptionPane.showMessageDialog(null, "No selecciono un archivo");
             }else {
-                //obj.tffrase.setText(arc[1]);
-              
                 Ventana2 v2 = new Ventana2();
                 Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal-tinicio)/1000);
             }
