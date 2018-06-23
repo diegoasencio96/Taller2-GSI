@@ -62,24 +62,34 @@ public class Ventana1Controlador implements ActionListener {
         
         //Declaración de las expresiones irregulares
         Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
-            Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$|");
+            Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$");
+            Pattern tagsNombre = Pattern.compile("^NNS$");
         Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
         
         // Validar voz pasiva (to be + verbo)
+        for (int i=0;i<tags.length;i++) {
+            System.out.println(tags[i]);   
+        }
         for (int i=0;i<tags.length-3;i++) {
             
             Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
              if (formasToBe.matches()) {
-                 
                  Matcher verbos = tagsVerbos.matcher(tags[i+1]);
+                 Matcher nombre = tagsNombre.matcher(tags[i-1]);
                  if (verbos.matches()) {
-                     
                      Matcher preposiciones = tagsPrepos.matcher(tokens[i+2]);
                      if (preposiciones.matches()) {
-                         sol = false;
+                        Matcher verbos1 = tagsVerbos.matcher(tags[i+3]);
+                        if (!verbos1.matches()) {
+                            sol = false;
+                        }
+                    }else if(tokens[i+2].equals("and")){
+                        Matcher verbos1 = tagsVerbos.matcher(tags[i+3]);
+                        if (verbos1.matches()) {
+                            sol = false;
+                        }
                     }
-                }
-                 else{
+                }else{
                      Matcher preposiciones = tagsPrepos.matcher(tokens[i+3]);
                      if (preposiciones.matches()) {
                          sol = false;
