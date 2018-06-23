@@ -31,10 +31,6 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 import com.grupo3eis.maventaller2gsi.vista.Ventana1;
 import com.grupo3eis.maventaller2gsi.vista.Ventana2;
-<<<<<<< HEAD
-=======
-import java.io.FileNotFoundException;
->>>>>>> 3a057b7d61171c5ac330c954b8f05e49e2acfd9a
 import java.util.concurrent.ForkJoinPool;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,9 +51,12 @@ public class Ventana1Controlador implements ActionListener {
     
     
     public String sentenceDetect(String paragraph) {
-	boolean sol = true;
+	
         
-<<<<<<< HEAD
+	// Tagger tagging the tokens
+        String tokens[] = tokenizer.tokenize(paragraph);
+	String tags[] = posTagger.tag(tokens);
+        
         boolean sol = true;
         
         //Declaración de las expresiones irregulares
@@ -67,44 +66,26 @@ public class Ventana1Controlador implements ActionListener {
         
         // Validar voz pasiva (to be + verbo)
         for (int i=0;i<tags.length-3;i++) {
-=======
-        try {
->>>>>>> 3a057b7d61171c5ac330c954b8f05e49e2acfd9a
             
-            String tokens[] = tokenizer.tokenize(paragraph);
-
-            String tags[] = posTagger.tag(tokens);
-
-            //Declaración de las expresiones irregulares
-            Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
-            Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$|");
-            Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
-
-            // Validar voz pasiva (to be + verbo)
-            for (int i=0;i<tags.length-3;i++) {
-
-                Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
-                 if (formasToBe.matches()) {
-
-                     Matcher verbos = tagsVerbos.matcher(tags[i+1]);
-                     if (verbos.matches()) {
-
-                         Matcher preposiciones = tagsPrepos.matcher(tokens[i+2]);
-                         if (preposiciones.matches()) {
-                             sol = false;
-                        }
+            Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
+             if (formasToBe.matches()) {
+                 
+                 Matcher verbos = tagsVerbos.matcher(tags[i+1]);
+                 if (verbos.matches()) {
+                     
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+2]);
+                     if (preposiciones.matches()) {
+                         sol = false;
                     }
-                     else{
-                         Matcher preposiciones = tagsPrepos.matcher(tokens[i+3]);
-                         if (preposiciones.matches()) {
-                             sol = false;
-                        }
-                     }
-                }                                   
-            } 
-        }catch(Exception e) {
-            
-        }
+                }
+                 else{
+                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+3]);
+                     if (preposiciones.matches()) {
+                         sol = false;
+                    }
+                 }
+            }                                   
+        } 
         
         if(sol) {
             //JOptionPane.showMessageDialog(null, "Activo");
@@ -134,33 +115,11 @@ public class Ventana1Controlador implements ActionListener {
                ArrayList<String> arr = new ArrayList();
                while((aux=lee.readLine())!=null)
                {
-                   arr.add(aux);
-<<<<<<< HEAD
+                   texto += (aux+"-----"+sentenceDetect(aux)+ "\n");//arr.add(aux);
                }
                lee.close();
-               String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
-               texto = result;
-               /*while((aux=lee.readLine())!=null)
-               {
-                   
-                   //System.out.println(result);
-                   texto += result;
-                   //texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
-               }
-=======
-               }
-               lee.close();
-               String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
-               texto = result;
-               /*while((aux=lee.readLine())!=null)
-               {
-                   
-                   //System.out.println(result);
-                   texto += result;
-                   //texto+= (aux+"-"+sentenceDetect(aux)+ "\n");
-               }
->>>>>>> 3a057b7d61171c5ac330c954b8f05e49e2acfd9a
-                  lee.close();*/
+               //String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
+               //texto = result;
                
             }    
         }catch(IOException ex) {
@@ -171,7 +130,7 @@ public class Ventana1Controlador implements ActionListener {
         //JOptionPane.showMessageDialog(null, texto);
         //System.out.println(texto);
         tfinal = System.currentTimeMillis();
-        JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
+        //JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
         return texto;//El texto se almacena en el JTextArea
     }
     
@@ -187,11 +146,6 @@ public class Ventana1Controlador implements ActionListener {
             this.obj.bbuscar.addActionListener(this);
             // this.obj.tffrase.setText("This is a statement. This is another statement. Now is an abstract word for time, that is always flying.");
             this.obj.tffrase.setText("John is 27 years old.");
-<<<<<<< HEAD
-        int nThreads = Runtime.getRuntime().availableProcessors();
-        System.out.println("Numero de Procesadores: "+nThreads);
-        forkJoinPool = new ForkJoinPool(nThreads);
-=======
             int nThreads = Runtime.getRuntime().availableProcessors();
             System.out.println("Numero de Procesadores: "+nThreads);
             forkJoinPool = new ForkJoinPool(nThreads);
@@ -199,29 +153,22 @@ public class Ventana1Controlador implements ActionListener {
             is1 = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-token.bin");
             TokenizerModel tokenModel = new TokenizerModel(is1);
             tokenizer = new TokenizerME(tokenModel);
+            
             // Parts-Of-Speech Tagging
-            // reading parts-of-speech model to a stream
+            // reading parts-of-speech model to a stream 
             InputStream posModelIn = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-pos-maxent.bin");
+
             // loading the parts-of-speech model from stream
             posModel = new POSModel(posModelIn);
-            // initializing the parts-of-speech tagger with model
+            // initializing the parts-of-speech tagger with model 
+            
             posTagger = new POSTaggerME(posModel);
-            // Tagger tagging the tokens
+            
             posModelIn.close();
             is1.close();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                is1.close();
-            } catch (IOException ex) {
-                Logger.getLogger(Ventana1Controlador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        }catch(Exception e) {
+            
         }
-        
->>>>>>> 3a057b7d61171c5ac330c954b8f05e49e2acfd9a
         
     }
 
@@ -238,7 +185,7 @@ public class Ventana1Controlador implements ActionListener {
         if(ae.getSource() == obj.bbuscar) {
             String arc  = abrirArchivo();
             if(arc == null || arc.equals("")) {
-                
+                 JOptionPane.showMessageDialog(null, "No selecciono un archivo");
             }else {
                 //obj.tffrase.setText(arc[1]);
               

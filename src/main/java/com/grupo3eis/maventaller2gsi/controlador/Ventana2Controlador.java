@@ -26,13 +26,13 @@ public class Ventana2Controlador implements ActionListener {
     public String res;
     public DefaultTableModel modelo;
     
-    public Ventana2Controlador(Ventana2 v2, String res, long tiempo) {
+    public Ventana2Controlador(Ventana2 v2, String res, float tiempo) {
         this.scroll = v2.scroll;
         this.tabla = v2.tabla;
         this.ltiempo = v2.ltiempo;
         this.res = res;
         
-        ltiempo.setText(ltiempo.getText()+" "+Long.toString(tiempo)+" seg");
+        ltiempo.setText(ltiempo.getText()+" "+Float.toString(tiempo)+" seg");
         Vector columnas = new Vector();
         columnas.add("Frase en ingles");
         columnas.add("Resultado");
