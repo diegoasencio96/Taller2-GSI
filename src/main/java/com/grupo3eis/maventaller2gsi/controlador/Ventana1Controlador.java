@@ -41,7 +41,7 @@ import java.util.regex.Pattern;
  * @author lenovo-G40
  */
 public class Ventana1Controlador implements ActionListener {
-    
+
     private Ventana1 obj;
     private float tfinal;
     private float tinicio;
@@ -49,129 +49,143 @@ public class Ventana1Controlador implements ActionListener {
     private TokenizerME tokenizer;
     private POSModel posModel;
     private POSTaggerME posTagger;
-    
+
     private int naciertos = 0;
     private int nlineas = 0;
     private double porcentaje_acierto = 0.0;
-    
-    
+
     public String sentenceDetect(String paragraph) {
-	
-        
-	// Tagger tagging the tokens
+
+        // Tagger tagging the tokens
         String tokens[] = tokenizer.tokenize(paragraph);
-	String tags[] = posTagger.tag(tokens);
-        
+        String tags[] = posTagger.tag(tokens);
+
         boolean sol = true;
-        
+
         //Declaración de las expresiones irregulares
         Pattern tagsFormasToBe = Pattern.compile("^is$|^were$|^was$|^be$|^are$|^been$");
-            Pattern tagsVerbos = Pattern.compile("^VB$|^VBD$|^VBP$|^VBN$|^VBZ$");
-            Pattern tagsNombre = Pattern.compile("^NNS$");
-        Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
-        
+        Pattern tagsVerbos = Pattern.compile("^VB$|^VBN$");
+        Pattern tagsNombre = Pattern.compile("^NN$|^NNS$|^NNP$");
+        Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");
+
         // Validar voz pasiva (to be + verbo)
-        /*for (int i=0;i<tags.length;i++) {
-            System.out.println(tags[i]);   
-        }*/
-        for (int i=0;i<tags.length-3;i++) {
-            
-            Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
-             if (formasToBe.matches()) {
-                 Matcher verbos = tagsVerbos.matcher(tags[i+1]);
-                 Matcher nombre = tagsNombre.matcher(tags[i-1]);
-                 if (verbos.matches()) {
-                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+2]);
-                     if (preposiciones.matches()) {
-                        Matcher verbos1 = tagsVerbos.matcher(tags[i+3]);
+        for (int i = 0; i < tags.length; i++) {
+            System.out.println(tags[i]);
+        }
+        for (int i = 0; i < tags.length - 3; i++) {
+
+            Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);
+
+            Matcher nombre = tagsNombre.matcher(tags[i + 1]);
+            if (nombre.matches()) {
+                Matcher verbos = tagsVerbos.matcher(tags[i + 3]);
+                if (verbos.matches()) {
+                    sol = false;
+                }
+            } else if (formasToBe.matches()) {
+                Matcher verbos = tagsVerbos.matcher(tags[i + 1]);
+
+                /*
+                    DT
+                    NNS
+                    VBP
+                    VBN
+                    VBN
+                 */
+                if (verbos.matches()) {
+                    Matcher preposiciones = tagsPrepos.matcher(tokens[i + 2]);
+                    if (preposiciones.matches()) {
+                        Matcher verbos1 = tagsVerbos.matcher(tags[i + 3]);
                         if (!verbos1.matches()) {
                             sol = false;
                         }
-                    }else if(tokens[i+2].equals("and")){
-                        Matcher verbos1 = tagsVerbos.matcher(tags[i+3]);
+                    } else if (tokens[i + 2].equals("and")) {
+                        Matcher verbos1 = tagsVerbos.matcher(tags[i + 3]);
                         if (verbos1.matches()) {
                             sol = false;
                         }
                     }
-                }else{
-                     Matcher preposiciones = tagsPrepos.matcher(tokens[i+3]);
-                     if (preposiciones.matches()) {
-                         sol = false;
+                } else {
+                    Matcher preposiciones = tagsPrepos.matcher(tokens[i + 3]);
+                    if (preposiciones.matches()) {
+                        sol = false;
                     }
-                 }
-            }                                   
-        } 
-        
-        if(sol) {
+                }
+            }
+        }
+
+        if (sol) {
             //JOptionPane.showMessageDialog(null, "Activo");
             return "activo";
-        }else {
+        } else {
             //JOptionPane.showMessageDialog(null, "Pasivo");
             return "pasivo";
         }
     }
-    
+
     private String abrirArchivo() {
         //String[] sol = new String[2];
-        String aux="";   
-        String texto="";
+        String aux = "";
+        String texto = "";
         File abre = null;
         naciertos = 0;
         nlineas = 0;
         porcentaje_acierto = 0.0;
-        
+
         try {
-            JFileChooser file=new JFileChooser();
+            JFileChooser file = new JFileChooser();
             file.showOpenDialog(obj);
-            abre=file.getSelectedFile();
+            abre = file.getSelectedFile();
             int c = 0;
-            if(abre!=null) {     
-               JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
-               
-               FileReader archivos=new FileReader(abre);
-               BufferedReader lee=new BufferedReader(archivos);
-               tinicio = System.currentTimeMillis();
-               //ArrayList<String> arr = new ArrayList();
-               while((aux=lee.readLine())!=null)
-               {
-                   //System.out.println();
-                   nlineas += 1;
-                   String[] arrl = aux.split(";");
-                   if(arrl[2].equals(sentenceDetect(arrl[1]))) {
-                       naciertos+=1;
-                   }
-                   if (c == 0) {
-                       texto += (arrl[0]+"-----"+arrl[1]+"-----"+arrl[2]+"-----"+"Resultado"+ "\n");//arr.add(aux);
-                       c++;
-                   }else {
-                       texto += (arrl[0]+"-----"+arrl[1]+"-----"+arrl[2]+"-----"+sentenceDetect(arrl[1])+ "\n");//arr.add(aux);
-                   }
-                   
-               }
-               lee.close();
-               //String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
-               //texto = result;
-               
-            }    
-        }catch(IOException ex) {
-            JOptionPane.showMessageDialog(null,ex+"" +
-                 "\nNo se ha encontrado el archivo",
-                       "ADVERTENCIA!!!",JOptionPane.WARNING_MESSAGE);
+            if (abre != null) {
+                JOptionPane.showMessageDialog(null, "Leyendo datos del archivo\nEspere un momento por favor.");
+
+                FileReader archivos = new FileReader(abre);
+                BufferedReader lee = new BufferedReader(archivos);
+                tinicio = System.currentTimeMillis();
+                //ArrayList<String> arr = new ArrayList();
+                while ((aux = lee.readLine()) != null) {
+                    //System.out.println();
+                    nlineas += 1;
+                    String[] arrl = aux.split(";");
+                    if (arrl[2].equals(sentenceDetect(arrl[1]))) {
+                        naciertos += 1;
+                    }
+                    if (c == 0) {
+                        texto += (arrl[0] + "-----" + arrl[1] + "-----" + arrl[2] + "-----" + "Resultado" + "\n");//arr.add(aux);
+                        c++;
+                    } else {
+                        texto += (arrl[0] + "-----" + arrl[1] + "-----" + arrl[2] + "-----" + sentenceDetect(arrl[1]) + "\n");//arr.add(aux);
+                    }
+
+                }
+                lee.close();
+                //String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
+                //texto = result;
+
+            }
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, ex + ""
+                    + "\nNo se ha encontrado el archivo",
+                    "ADVERTENCIA!!!", JOptionPane.WARNING_MESSAGE);
         }
         //JOptionPane.showMessageDialog(null, texto);
         //System.out.println(texto);
         tfinal = System.currentTimeMillis();
-        if(nlineas > 0) porcentaje_acierto = (naciertos*100)/nlineas;
-        else porcentaje_acierto = 0;
+        if (nlineas > 0) {
+            porcentaje_acierto = (naciertos * 100) / nlineas;
+        } else {
+            porcentaje_acierto = 0;
+        }
         //JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
         return texto;//El texto se almacena en el JTextArea
     }
-    
+
     public Ventana1Controlador() {
         FileInputStream is1 = null;
         try {
             int nThreads = Runtime.getRuntime().availableProcessors();
-            System.out.println("Numero de Procesadores: "+nThreads);
+            System.out.println("Numero de Procesadores: " + nThreads);
             forkJoinPool = new ForkJoinPool(nThreads);
             //String sentence = "John is 27 years old.";
             is1 = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-token.bin");
@@ -198,23 +212,23 @@ public class Ventana1Controlador implements ActionListener {
             }
         }
     }
-    
+
     public Ventana1Controlador(Ventana1 obj) {
         InputStream is1 = null;
         try {
-            this.obj=obj;
+            this.obj = obj;
             this.obj.baceptar.addActionListener(this);
             this.obj.bbuscar.addActionListener(this);
             // this.obj.tffrase.setText("This is a statement. This is another statement. Now is an abstract word for time, that is always flying.");
             this.obj.tffrase.setText("John is 27 years old.");
             int nThreads = Runtime.getRuntime().availableProcessors();
-            System.out.println("Numero de Procesadores: "+nThreads);
+            System.out.println("Numero de Procesadores: " + nThreads);
             forkJoinPool = new ForkJoinPool(nThreads);
             //String sentence = "John is 27 years old.";
             is1 = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-token.bin");
             TokenizerModel tokenModel = new TokenizerModel(is1);
             tokenizer = new TokenizerME(tokenModel);
-            
+
             // Parts-Of-Speech Tagging
             // reading parts-of-speech model to a stream 
             InputStream posModelIn = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-pos-maxent.bin");
@@ -222,37 +236,37 @@ public class Ventana1Controlador implements ActionListener {
             // loading the parts-of-speech model from stream
             posModel = new POSModel(posModelIn);
             // initializing the parts-of-speech tagger with model 
-            
+
             posTagger = new POSTaggerME(posModel);
-            
+
             posModelIn.close();
             is1.close();
-        }catch(Exception e) {
-            
+        } catch (Exception e) {
+
         }
-        
+
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource() == obj.baceptar) {
-            if(obj.tffrase.getText().equals("")) {
-                 JOptionPane.showMessageDialog(null, "No ha ingresado una frase. ");
-            }else {
+        if (ae.getSource() == obj.baceptar) {
+            if (obj.tffrase.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "No ha ingresado una frase. ");
+            } else {
                 obj.text3.setText(sentenceDetect(obj.tffrase.getText()));
-                
+
             }
         }
-        if(ae.getSource() == obj.bbuscar) {
-            String arc  = abrirArchivo();
-            if(arc == null || arc.equals("")) {
-                 JOptionPane.showMessageDialog(null, "No selecciono un archivo");
-            }else {
+        if (ae.getSource() == obj.bbuscar) {
+            String arc = abrirArchivo();
+            if (arc == null || arc.equals("")) {
+                JOptionPane.showMessageDialog(null, "No selecciono un archivo");
+            } else {
                 Ventana2 v2 = new Ventana2();
-                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal-tinicio)/1000, nlineas, naciertos, porcentaje_acierto);
+                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal - tinicio) / 1000, nlineas, naciertos, porcentaje_acierto);
             }
         }
-    
+
     }
-    
+
 }
