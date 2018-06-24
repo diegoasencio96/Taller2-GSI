@@ -1,0 +1,1001 @@
+No.;Phrases;Type
+1;Harry ate six shrimp at dinner.;activo
+2;My grandfather built this house in 1943.;activo
+3;Beautiful giraffes roam the savannah;activo
+4;The savannah is roamed by beautiful giraffes;pasivo
+5;Sue changed the flat tire;activo
+6;The flat tire was changed by Sue;pasivo
+7;We are going to watch a movie tonight;activo
+8;A movie is going to be watched by us tonight;pasivo
+9;I ran the obstacle course in record time;activo
+10;The obstacle course was run by me in record time;pasivo
+11;The crew paved the entire stretch of highway;activo
+12;The entire stretch of highway was paved by the crew;pasivo
+13;Mom read the novel in one day;activo
+14;The novel was read by Mom in one day;pasivo
+15;The critic wrote a scathing review;activo
+16;A scathing review was written by the critic;pasivo
+17;I will clean the house every Saturday;activo
+18;The house will be cleaned by me every Saturday;pasivo
+19;The staff is required to watch a safety video every year;activo
+20;A safety video will be watched by the staff every year;pasivo
+21;She faxed her application for a new job;activo
+22;The application for a new job was faxed by her;pasivo
+23;Tom painted the entire house;activo
+24;The entire house was painted by Tom;pasivo
+25;The teacher always answers the students questions;activo
+26;The students’ questions are always answered by the teacher;pasivo
+27;The choir really enjoys that piece;activo
+28;That piece is really enjoyed by the choir;pasivo
+29;Who taught you to ski? ;activo
+30;By whom were you taught to ski? ;pasivo
+31;The forest fire destroyed the whole suburb. ;activo
+32;The whole suburb was destroyed by the forest fire. ;pasivo
+33;The two kings are signing the treaty. ;activo
+34;The treaty is being signed by the two kings. ;pasivo
+35;The cleaning crew vacuums and dusts the office every night. ;activo
+36;Every night the office is vacuumed and dusted by the cleaning crew. ;pasivo
+37;Larry generously donated money to the homeless shelter. ;activo
+38;Money was generously donated to the homeless shelter by Larry. ;pasivo
+39;No one responded to my sales ad. ;activo
+40;My sales ad was not responded to by anyone. ;pasivo
+41;The wedding planner is making all the reservations. ;activo
+42;All the reservations will be made by the wedding planner. ;pasivo
+43;Susan will bake two dozen cupcakes for the bake sale. ;activo
+44;Yam is eaten by people in my country ;pasivo
+45;The science class viewed the comet. ;activo
+46;The comet was viewed by the science class. ;pasivo
+47;Who ate the last cookie? ;activo
+48;The last cookie was eaten by whom? ;pasivo
+49;Alex posted the video on Facebook. ;activo
+50;The video was posted on Facebook by Alex. ;pasivo
+51;The director will give you instructions. ;activo
+52;Instructions will be given to you by the director. ;pasivo
+53;Thousands of tourists view the Grand Canyon every year. ;activo
+54;The Grand Canyon is viewed by thousands of tourists every year. ;pasivo
+55;The homeowners remodeled the house to help it sell. ;activo
+56;The house was remodeled by the homeowners to help it sell. ;pasivo
+57;The team will celebrate their victory tomorrow. ;activo
+58;The victory will be celebrated by the team tomorrow. ;pasivo
+59;The saltwater eventually corroded the metal beams. ;activo
+60;The metal beams were eventually corroded by the saltwater. ;pasivo
+61;The kangaroo carried her baby in her pouch. ;activo
+62;The baby was carried by the kangaroo in her pouch. ;pasivo
+63;Some people raise sugar cane in Hawaii. ;activo
+64;Sugar cane is raised by some people in Hawaii. ;pasivo
+65;The hunter killed the lion.;activo
+66;The lion was killed by the hunter.;pasivo
+67;Someone has cleaned the windows;activo
+68;The windows have been cleaned;pasivo
+69;I gave him a book for his birthday;activo
+70;He was given a book for his birthday.;pasivo
+71;Someone sent her a cheque for a thousand euros;activo
+72;She was sent a cheque for a thousand euros.;pasivo
+73;They called off the meeting.;activo
+74;The meeting was called off.;pasivo
+75;His grandmother looked after him.;activo
+76;He was looked after by his grandmother.;pasivo
+77;They will send him away to school;activo
+78;He will be sent away to school.;pasivo
+79; I write a letter;activo
+80;A letter is written by me;pasivo
+81;The girl was washing the dog.;activo
+82;The dog was being washed by the girl.;pasivo
+83;The fox ate pancakes.;activo
+84;Pancakes were eaten by the fox.;pasivo
+85;He is eating dinner.;activo
+86;Dinner is being eaten by him.;pasivo
+87;Today the fox took a test.;activo
+88;Today a test was taken by the fox.;pasivo
+89;The boy is picked up by her mother every day;pasivo
+90;The mother avery day picked the boy;activo
+91;The wall has been painted blue;pasivo
+92;someone painted in blue  the wall;activo
+93;Many foxes can speak Spanish.;activo
+94;Spanish is spoken by many foxes.;pasivo
+95;I made the cookies.;activo
+96;The cookies were made by me.;pasivo
+97;Very few people own pet foxes;activo
+98;Pet foxes are owned by very few people.;pasivo
+99;You can cook popcorn on the stove.;activo
+100;Popcorn can be cooked on the stove.;pasivo
+101;The dog burned the popcorn;activo
+102;The popcorn was burned by the dog;pasivo
+103;The dog bit my hand;activo
+104;My hand was bitten by the dog;pasivo
+105;Many friends visited the fox’s cozy home;activo
+106;The fox’s cozy home was visited by many of his friends;pasivo
+107;Mauricio has dinked his coke early;activo
+108;The coke was drunk early by Mauricio;pasivo
+109;Alberto has ridden the brown horse;activo
+110;The brown horse was ridden by Alberto;pasivo
+111;Carlos kicked the soccer ball;activo
+112;The black ball was kicked by Carlos;pasivo
+113;The child used his toy all afternoon;activo
+114;The toy was used by the child all afternoon;pasivo
+115;Someone built those walls;activo
+116;Those walls were built;pasivo
+117;John bathed the dog;activo
+118;The dog was bathed by John;pasivo
+119;They used the car all day;activo
+120;The car was used all day;pasivo
+121;Maria sent the message yesterday;activo
+122;The message was sent yestarday by Maria;pasivo
+123;The man must have drunk six beers;activo
+124;Six beers must have drunk by the man;pasivo
+125;Picasso was painting Guernica at that time.;activo
+126;The cleaner has cleaned the office.;activo
+127;He had written three books before 1867.;activo
+128;People speak Portuguese in Brazil.;activo
+129;They finished the work today;activo
+130;The work was finished today;pasivo
+131;The mother bathed her baby;activo
+132;The baby was bathed by his mother;pasivo
+133;They picked the apple yesterday;activo
+134;The apples were picked yesterday;pasivo
+135;I had cleaned all the windows before the storm.;activo
+136;The breads were baked this morning;pasivo
+137;He took her money;activo
+138;Her money was taken;pasivo
+139;They activated the levers;activo
+140;The levers were activated by them;pasivo
+141;He manufactured the rings last month;activo
+142;The rings were manufactured last month;pasivo
+143;The doctor looked after the patients;pasivo
+144;Those barbecue ribs were eaten by you;activo
+145;You ate those barbecue ribs;pasivo
+146;You developed the program yesterday;activo
+147;The program was developed yesterday;pasivo
+148;The scouts washed the flags;activo
+149;The flags were washed by the scouts;pasivo
+150;Harry ate six shrimp at dinner;activo
+151;James might cook dinner.;activo
+152;My uncle raise sugar cane in Hawaii;activo
+153;Sugar cane is raised by my uncle in Hawaii;pasivo
+154;I keep the butter in the fridge;activo
+155;The butter is kept in the fridge;pasivo
+156;John is keeping my house tidy;activo
+157;My house is being kept tidy;pasivo
+158;Mary kept her schedule meticulously;activo
+159;Mary's schedule was kept meticulously;pasivo
+160;The theater was keeping a seat for you;activo
+161;A seat was being kept for you;pasivo
+162;I have kept all your old letters;activo
+163;All your old letters have been kept;pasivo
+164;He had kept up his training regimen for a month;activo
+165;His training regimen had been kept up for a month;pasivo
+166;Mark will keep the ficus;activo
+167;The ficus will be kept;pasivo
+168;Sheila is drinking a cup of tea.;activo
+169;My father is washing the car.;pasivo
+170;I would have kept your bicycle here if you had left it with me;activo
+171;Your bicycle would have been kept here if you had left it with me;pasivo
+172;She wants to keep the book;activo
+173;The book wants to be kept;pasivo
+174;Judy was happy to have kept the puppy;activo
+175;The puppy was happy to have been kept;pasivo
+176;I have a feeling that you may be keeping a secret;activo
+177;I have a feeling that a secret may be being kept;pasivo
+178;I am writing a poem.;activo
+179;We are not playing football.;activo
+180;Many people know Napa Valley for its excellent wines;activo
+181;Napa Valley is known for its excellent wines;pasivo
+182;Leonaro Da Vinci painted the Mona Lisa;activo
+183;The Mona Lisa was painted by Leonardo Da Vinci;pasivo
+184;He is not wearing a tie.;activo
+185;Ms Sullivan teaches us grammar.;activo
+186;My father made wine from grapes;activo
+187;Wine is made from grapes;pasivo
+188;They made many cars in Japan;activo
+189;Many cars are made in Japan;pasivo
+190;He is sending the document right now;activo
+191;The document is being sent right now;pasivo
+192;My boss is sending me to work in the London office;activo
+193;I am being sent to work in the London office;pasivo
+194;They invited John to speak at the conference;activo
+195;John was invited to speak at the conference;pasivo
+196;Daniel invited us to his wedding with Mary;activo
+197;We were invited to Daniel and Mary’s wedding;pasivo
+198;They were washing the dog when I got home;activo
+199;The dog was being washed when I got home;pasivo
+200;Charles were washing their cars while they were in the mall shopping;activo
+201;Their cars were being washed while they were in the mall shopping;pasivo
+202;They will sign the contract tomorrow;activo
+203;The contract will be signed tomorrow;pasivo
+204;They will sign all the documents next week;activo
+205;The documents will all be signed by next week;pasivo
+206;They are going to build a bridge within the next two years;activo
+207;A bridge is going to be built within the next two years;pasivo
+208;City Hall is going to build new houses in our neighborhood;activo
+209;New houses are going to be built in our neighborhood;pasivo
+210;They sold that start-up for $5 million;activo
+211;That start-up has been sold for $5 million;pasivo
+212;The teacher praised him.;activo
+213;The firemen took the injured to the hospital.;activo
+214;They hired the new manager before John left the company;activo
+215;The new manager had been hired before John left the company;pasivo
+216;They hired all the employees before the store opened;activo
+217;All the employees had hired before the store opened;pasivo
+218;They will have loaded the crates by then;activo
+219;The crates will have been loaded by then;pasivo
+220;they must stop the criminals before committing their crimes;activo
+221;Criminals must be stopped before they commit crimes;pasivo
+222;Alexander Fleming discovered Penicillin in 1928;activo
+223;Penicillin was discovered by Alexander Fleming in 1928;pasivo
+224;They are taking the statements from all witnesses at this moment;activo
+225;Statements are being taken from all the witnesses at this moment;pasivo
+226;An international ban on whaling must protect the whales;activo
+227;Whales must be protected by an international ban on whaling;pasivo
+228;Good Taste catered both weddings;activo
+229;Both weddings were catered by Good Taste;pasivo
+230;They steal a Picasso from the Metropolitan Museum of Art;activo
+231;A Picasso was stealed from the Metropolitan Museum of Art;pasivo
+232;Frederick painted the house last week;activo
+233;The house was painted by Frederick last week;pasivo
+234;People drink champagne on New Year’s Eve;activo
+235;Champagne is drunk on New Year’s Eve;pasivo
+236;Chefs use these machines to mix the ingredients;activo
+237;These machines are used to mix the ingredients;pasivo
+238;They renovated the restaurant in 2004;activo
+239;The restaurant was renovated in 2004;pasivo
+240;The teachers informed the students that the class had been cancelled;activo
+241;The students were informed that the class had been cancelled;pasivo
+242;Alice posted the letter.;activo
+243;John Mathews built this house in 1991.;activo
+244;They consider that New York is the most diverse city in the U.S.;activo
+245;New York is considered the most diverse city in the U.S.;pasivo
+246;They believe that Amelia Earhart's planed crashed in Pacific Ocean;activo
+247;It is believed that Amelia Earhart’s plane crashed in Pacific Ocean;pasivo
+248;Doctors think that the skin cancers are caused by excessive exposure to the sun;activo
+249;Skin cancers are thought to be caused by excessive exposure to the sun;pasivo
+250;The people see Hungarian as one of the most dificult languages to learn;activo
+251;Hungarian is seen as one of the world’s most difficult languages to learn;pasivo
+252;The people elected George Washinton as president in 1788;activo
+253;George Washington was elected president in 1788;pasivo
+254;John Kimble killed two people by shooting them on Friday night;activo
+255;Two people were killed in a drive-by shooting on Friday night;pasivo
+256;The fox ate pancakes;activo
+257;Pancakes were eaten by fox;pasivo
+258;Andres is eating his dinner;activo
+259;Dinner is being eaten by him;pasivo
+260;Today the dog took a test;activo
+261;Today a test was taken by the dog;pasivo
+262;Many people can speak chinese;activo
+263;Chinese is spoken by many people;pasivo
+264;I made the chocolate cookies;activo
+265;The chocolates cookies were made by me;pasivo
+266;Very few people own pet skunks;activo
+267;Pet skunks are owned by very few people;pasivo
+268;You can cook popcorn on the stove;activo
+269;Popcorn can be cooked on the stove;pasivo
+270;The cat burned the popcorn;activo
+271;The popcorn was burned by the cat;pasivo
+272;The dog bit my hand;activo
+273;My hand was bitten by the dog;pasivo
+274;My auntie will bake cookies for my birthday.;pasivo
+275;The cookies for my birthday will be baked by my auntie.;pasivo
+276;I must write an essay for Monday.;activo
+277;The essay must be written on Sunday afternoon.;pasivo
+278;Sandra is helping her cousin to find house.;activo
+279;Sandra is cousin is been helped to find house.;pasivo
+280;We must have learned this theme for the test.;activo
+281;This theme must have been learned for the test.;pasivo
+282;Harry has been repairing his car.;activo
+283;The car has been repaired by Harry.;pasivo
+284;I have seeing this program all the week.;activo
+285;This program has been seen all the week by me.;pasivo
+286;You can do it;activo
+287;This homework can’t be done;pasivo
+288;I will think of you.;activo
+289;You will be tough by me.;pasivo
+290;Madeleine has been traveling to Paris every week.;activo
+291;Her luggage has been traveled with her;pasivo
+292;They follow the ice cream car.;activo
+293;The ice cream car is followed by the children.;pasivo
+294;The boy is picked up by her mother every day.;pasivo
+295;The wall has been painted blue.;pasivo
+296;A lie was told by someone in this room.;pasivo
+297;The stolen money was found by the police.;pasivo
+298;Nothing can be done.;pasivo
+299;The book was written by his grandmother.;pasivo
+300;The pirate left the treasure where it could not be found.;pasivo
+301;The song was written by me.;pasivo
+302;The sweater was made by my girlfriend.;pasivo
+303;These facts have been checked.;pasivo
+304;More important matters must be discussed.;pasivo
+305;Better results can be expected.;pasivo
+306;She was nowhere to be found.;pasivo
+307;Mary enjoys the view.;activo
+308;The boys play basketball;activo
+309;She well wear the pink dress;activo
+310;Thomas told a lie.;activo
+311;Dad will arrive soon.;activo
+312;The mailman brought two letters.;activo
+313;I do not know the answer;activo
+314;You might win the race;activo
+315;He could play the piano very well;activo
+316;I well call you tomorrow;activo
+317;Francis builds a house;activo
+318;His new book was just published;pasivo
+319;She was nowhere to be found;pasivo
+320;The cake was not correctly prepared;pasivo
+321;The girl was raised in boarding schools;pasivo
+322;The fire was intentionally started;pasivo
+323;The doctor was received at the airport;pasivo
+324;The company was founded in 1990;pasivo
+325;Jim writes a letter;activo
+326;A letter is written by Jim;pasivo
+327;Jim wrote a letter;activo
+328;A letter was written by Jim;pasivo
+329;The street is swept by Julia;pasivo
+330;The cookies for my birthday will be baked by my auntie.;pasivo
+331;I must write an essay for Monday.;activo
+332;Sandra is helping her cousin to find house;activo
+333;We must have learned this theme for the test.;activo
+334;Harry has been repairing his car;activo
+335;The car has been repaired by Harry;pasivo
+336;I have seeing this program all the week;activo
+337;This program has been seen all the week by me;pasivo
+338;You can do it;activo
+339;You will be tough by me;pasivo
+340;The ice cream car is followed by the children;pasivo
+341;The building was design by a German Architect;pasivo
+342;The city was destroyed by earthquake;pasivo
+343;The letter has been sent by my father;pasivo
+344;Two suspects have been arrested by police;pasivo
+345;The war was followed by a political crisis;pasivo
+346;The money was returned by Kelly;pasivo
+347;The thief was captured by the police;pasivo
+348;The report has been finished by Mary;pasivo
+349;The concert was enjoyed by the audience;pasivo
+350;That book was written by Wilde;pasivo
+351;A dancing class was started by my sister last week;pasivo
+352;The cake will be eaten by Walter;pasivo
+353;The mail is delivered by Andy every day;pasivo
+354;The city was captured by the enemy;pasivo
+355;His house was destroyed by the fire;pasivo
+356;The doll house was built by Susana;pasivo
+357;Susana built the doll house;activo
+358;We were questioned by the police;pasivo
+359;The letter will be written by the manager;pasivo
+360;John writes the letter;activo
+361;The letter is written by John;pasivo
+362;John is writing the letter;activo
+363;The boy is picked up by her mother every day;pasivo
+364;The letter is being written by John;pasivo
+365;John wrote the letter;activo
+366;The letter was written by John;pasivo
+367;John was writing the letter;activo
+368;The letter was being written by John;pasivo
+369;John has written the letter;activo
+370;The letter has been written by John;pasivo
+371;John had written the letter;activo
+372;The letter had been written by John;activo
+373;John will write the letter;activo
+374;The letter will be written by John;pasivo
+375;John is going to write the letter;activo
+376;The letter is going to be written by John;pasivo
+377;Bartholdi designed the Statue of Liberty;activo
+378;The French gave the statue;activo
+379;The Statue of Liberty was designed by bartholdi;pasivo
+380;The house is cleaned by Sandra;pasivo
+381;Sugar cane is raised by some people in Hawaii.;pasivo
+382;The hunter killed the lion.;activo
+383;The lion was killed by the hunter.;pasivo
+384;Someone has cleaned the windows;activo
+385;The windows have been cleaned;pasivo
+386;I gave him a book for his birthday;activo
+387;He was given a book for his birthday.;pasivo
+388;Someone sent her a cheque for a thousand euros;activo
+389;She was sent a cheque for a thousand euros.;pasivo
+390;They called off the meeting.;activo
+391;The meeting was called off.;pasivo
+392;His grandmother looked after him.;activo
+393;He was looked after by his grandmother.;pasivo
+394;They will send him away to school;activo
+395;He will be sent away to school.;pasivo
+396;I write a letter;activo
+397;A letter is written by me;pasivo
+398;The girl was washing the dog.;activo
+399;The dog was being washed by the girl.;pasivo
+400;The fox ate pancakes.;activo
+401;Pancakes were eaten by the fox.;pasivo
+402;He is eating dinner.;activo
+403;Dinner is being eaten by him.;pasivo
+404;Today the fox took a test.;activo
+405;Today a test was taken by the fox.;pasivo
+406;A letter is written by Joe.;pasivo
+407;My house is being kept tidy by my sister;pasivo
+408;A school was built by the government;pasivo
+409;The whole city has been destroyed by the earthquake;pasivo
+410;An article had been published by Michael;pasivo
+411;The dog will be kept by my mother.;pasivo
+412;We will be waiting for you.;activo
+413;The boys play basketball;activo
+414;Mary enjoys the view.;activo
+415;Alice posted the letter.;activo
+416;A novel is being read by Mary;pasivo
+417;She’ll wear the pink dress.;activo
+418;John and Lucy were watching television;activo
+419;The mailman brought two letters;activo
+420;John and Lucy were watching television.;activo
+421;The kids are enjoying the game.;activo
+422;My auntie will bake cookies for my birthday;activo
+423;The cookies for my birthday will be baked by my auntie;pasivo
+424;A stone was being thrown by the kid ;pasivo
+425;A car has been bought by him ;pasivo
+426;Sam repaired the car;activo
+427;The car was repaired by Sam;pasivo
+428;The salesman was helping the customer when the thief came into the store;activo
+429;The customer was being helped by the salesman when the thief came into the store;pasivo
+430;Many tourists have visited that castle;activo
+431;That castle has been visited by many tourists;pasivo
+432;The door had been knocked at by someone;pasivo
+433;The fish is eaten by the cat;pasivo
+434;George had repaired many cars before he received his mechanic's license;activo
+435;Many cars had been repaired by George before he received his mechanic's license;pasivo
+436;Chef Jones had been preparing the restaurant's fantastic dinners for two years before he moved to Paris;activo
+437;The restaurant's fantastic dinners had been being prepared by Chef Jones for two years before he moved to Paris;pasivo
+438;I must write an essay for Monday.;activo
+439;Sandra’s cousin is been helped to find house.;pasivo
+440;Sandra is helping her cousin to find house.;activo
+441;The essay must be written on Sunday afternoon.;pasivo
+442;We must have learned this theme for the test.;activo
+443;This theme must have been learned for the test.;pasivo
+444;The car has been repaired by Harry.;pasivo
+445;This program has been seen all the week by me.;pasivo
+446; I have seeing this program all the week.;activo
+447;Harry has been repairing his car.;activo
+448;Madeleine has been traveling to Paris every week.;activo
+449;Her luggage has been traveled with her.;pasivo
+450;They follow the ice cream car.;activo
+451;The ice cream car is followed by the children.;pasivo
+452;The war was followed by a political crisis;activo
+453;The mailman was bitten by the dog.;activo
+454;The child was found in the forest.;pasivo
+455;Taxes to be raised next year.;activo
+456;The building was design by a German Architect.;pasivo
+457;The thief was captured by the police.;pasivo
+458;The government has decided to raise taxes next year.;pasivo
+459;Someone will finish the work by 5:00 PM;activo
+460;The work will be finished by 5:00 PM;pasivo
+461;Sally is going to make a beautiful dinner tonight;activo
+462;A beautiful dinner is going to be made by Sally tonight;pasivo
+463; John will be washing the dishes;activo
+464;The dishes will be being washed by John;pasivo
+465;John is going to be washing the dishes;activo
+466;The dishes are going to be being washed by John;pasivo
+467;They will have completed the project before the deadline;activo
+468;The project will have been completed before the deadline;pasivo
+469;They are going to have completed the project before the deadline;activo
+470;The project is going to have been completed before the deadline;pasivo
+471;The famous artist will have been painting the mural for over six months by the time it is finished;activo
+472;The mural will have been being painted by the famous artist for over six months by the time it is finished;pasivo
+473;The famous artist is going to have been painting the mural for over six months by the time it is finished;activo
+474;The mural is going to have been being painted by the famous artist for over six months by the time it is finished;pasivo
+475;Jerry used to pay the bills;activo
+476;The bills used to be paid by Jerry;pasivo
+477;My mother would always make the pies;activo
+478;The pies would always be made by my mother;pasivo
+479;I knew John would finish the work by 5:00 PM;activo
+480;I knew the work would be finished by 5:00 PM;pasivo
+481;I thought Sally was going to make a beautiful dinner tonight;activo
+482;I thought a beautiful dinner was going to be made by Sally tonight;pasivo
+483;The results were published in the Journal of the American Medical Association;pasivo
+484;A fair grading system was found to be important to all students;pasivo
+485;He is taken to school by his mum;pasivo
+486;They are being bullied;pasivo
+487;Have you been interviewed for many jobs?;pasivo
+488;We were told not to touch anything;pasivo
+489;Our computers were being attacked by hackers;pasivo
+490;His mother had been brought up in India;pasivo
+491;Arrangements will be made to move them to other locations;pasivo
+492;All the merchandise will have been shipped by tomorrow;pasivo
+493;France beat Brazil in the final;activo
+494;More than 300 million people speak Spanish;activo
+495;"Jack 	will take the matter forward";activo
+496;God loves all men;activo
+497;Birds build nests;activo
+498;Dog eats bones;activo
+499;All men are loved by God;pasivo
+500;Nests are built by birds;pasivo
+501;Bones are eaten by dog;pasivo
+502;Columbus discovered America;activo
+503;America was discovered by Columbus;pasivo
+504;Who did this work?;activo
+505;By whom was this work done?;pasivo
+506;Open the window;activo
+507;Let the window be opened;pasivo
+508;He is writing a letter;activo
+509;A letter is being written by him;pasivo
+510;The work will be finished by me;activo
+511;I will finish the work;pasivo
+512;Somebody cleaned the room yesterday;activo
+513;The room was cleaned yesterday;pasivo
+514;We must keep the rule;activo
+515;The rule must be kept by us;pasivo
+516;You bought a book;activo
+517;A book have been bought by you;pasivo
+518;He closed the window;activo
+519;The window was closed by him;pasivo
+520;She was writing letters;activo
+521;Letters were being written by her;pasivo
+522;I had posted a letter;activo
+523;A letter had been posted by me;pasivo
+524;I do not drink tea;activo
+525;Tea is not drunk by me;pasivo
+526;She does not eat a mango;activo
+527;A mango is not eaten by her;pasivo
+528;He will have finished his work;activo
+529;The work will have been finished by him;pasivo
+530;They are digging a well;activo
+531;A well is being dug by them;pasivo
+532;Help me;activo
+533;Let me be helped;pasivo
+534;Sing a song;activo
+535;Let a song be sing;pasivo
+536;Open the door;activo
+537;Let the door be opened;pasivo
+538;Don’t eat this fruit;activo
+539;Let not this fruit be eaten;pasivo
+540;Are you writing a letter?;activo
+541;Is a letter being written by you?;pasivo
+542;Is she beating the child?;activo
+543;Is the child beaten by her?;pasivo
+544;Will you accept the position?;activo
+545;Will the position be accepted by you?;pasivo
+546;Who broke the window?;activo
+547;By whom was the window broken?;pasivo
+548;"Why did you write such a letter?	";activo
+549;Why was such a letter written by you?;pasivo
+550;Where can you hide this box?;activo
+551;Where can this box be hidden by you?;pasivo
+552;Francis builds a house;activo
+553;Pierre is making a lemon pie;activo
+554;The thief was finally arrested;activo
+555;The police finally arrested the thief;pasivo
+556;We were taught grammar;activo
+557;The teacher taught us grammar;pasivo
+558;My purse has been stolen;activo
+559;Somebody has stolen my purse;pasivo
+560;"The patients were looked after	";activo
+561;A house is built by Francis;pasivo
+562;The contract has been signed by Charles;pasivo
+563;Allan had already stolen the car when the police arrived;activo
+564;The car had already been stolen by Allan when the police arrived;pasivo
+565;He is very well known by them;activo
+566;The room was painted by her;activo
+567;The car was bought by his father;activo
+568;That show was given by the actress;activo
+569;The dinner was made by Melanie;activo
+570;The computer was fixed by the engineer;activo
+571;Those grades were changed by a cheater;activo
+572;That bag was bought by Joan;activo
+573;The kids will be punished by their mother;activo
+574;Jason was congratulated by the teacher;activo
+575;Your document has been translated;activo
+576;Your file was downloaded;activo
+577;All the work was made by Rodrigo;activo
+578;My sweter was made in Mexico;activo
+579;That church was built during the 15th century;activo
+580;The ape is going to be received by the specialist;activo
+581;My phone was repaired by Jessica;activo
+582;The text was corrected by tmy english teacher;activo
+583;The water had been contaminated by that Factory;activo
+584;Jerry washes the car;activo
+585;The car is washed by Jerry;pasivo
+586;Kyle is typing the essay;activo
+587;The essay is being typed by Kyle;pasivo
+588;Tanya returned the gift;activo
+589;The gift was returned by Tanya;pasivo
+590;The officer was writing the ticket when the truck sped past us;activo
+591;The ticket was being written by the officer when the truck sped past us;pasivo
+592;Many tourists have visited the Carlsbad Caves;activo
+593;The Carlsbad Caves have been visited by many tourists;pasivo
+594;A book was offered to them by her;pasivo
+595; The jackpot will be won by her ;pasivo
+596;Joan had taught many international students before she began her job here;activo
+597;Many international students had been taught by Joan before she began her job here;pasivo
+598;Stephen Colbert had been writing comedy routines for many years before he worked on The Daily Show;activo
+599;Comedy routines had been being written by Stephen Colbert for many years before he worked on The Daily Show;pasivo
+600;Someone will open the store at 8:00 AM;activo
+601;The store will be opened at 8:00 AM;pasivo
+602;My sister is going to host a party tonight;activo
+603;A party is going to be hosted by my sister tonight;pasivo
+604; Lalo will be reading the biology assignment;activo
+605;The biology assignment will be being read by Lalo;pasivo
+606;Mary is going to be washing the dog;activo
+607;The dog is going to be being washed by Mary;pasivo
+608;They will have played ten basketball games before the end of March;activo
+609;Ten basketball games will have been played before the end of March;pasivo
+610;They are going to have played ten basketball games before the end of March;activo
+611;Ten basketball games are going to have been played before the end of March;pasivo
+612;Jose and Margo will have been remodeling the house for over nine months by the time it is completed;activo
+613;The house will have been being remodeled by Jose and Margo for over nine months by the time it is completed;pasivo
+614;Jose and Margo are going to have been remodeling the house for over nine months by the time it is completed;activo
+615;The house is going to have been being painted by Jose and Margo for over nine months by the time it is completed;pasivo
+616;Elise used to drive the bus;activo
+617;The bus used to be driven by Elise;pasivo
+618;My aunt would always make Thanksgiving dinner;activo
+619;Thanksgiving dinner would always be made by my aunt;pasivo
+620;The teacher knew the students would finish the test in an hour;activo
+621;The teacher knew the test would be finished in an hour;pasivo
+622;We thought our class was going to take a test today;activo
+623;We thought a test was going to be taken by our class today;pasivo
+624;The dessert was eaten by those women;activo
+625;People make a lot of wine in La Rioja.;activo
+626;A lot of wine is made in La Rioja.;pasivo
+627;A Chinese factory manufactures these phones.;activo
+628;These phones are manufactured in China.;pasivo
+629;Australians speak English.;activo
+630;English is spoken in Australia.;pasivo
+631;The Romans built this bridge over 2000 years ago.;activo
+632;This bridge was built by the Romans over 2000 years ago.;activo
+633;The Wright brothers invented the airplane in 1903.;activo
+634;The airplane was invented by the Wright Brothers in 1903.;activo
+635;My mother made the cake.;activo
+636;The cake was made by my mother.;activo
+637;Julia bought the new Game of Thrones book;activo
+638;The new Game of Thrones book was bought by Julia;pasivo
+639;Jim writes a letter;activo
+640;A letter is written by Jim;pasivo
+641;Jim wrote a letter;activo
+642;A letter was written by Jim;pasivo
+643;I will finish the project tomorrow.;activo
+644;The project will be finished tomorrow.;pasivo
+645;Peter will make dinner on Saturday.;activo
+646;Dinner will be made by Peter on Saturday.;pasivo
+647;He will receive your letter on Thursday.;activo
+648;Your letter will be received on Thursday.;pasivo
+649;Mary is making tea right now.;activo
+650;The tea is being made right now.;pasivo
+651;Scientists are discovering new planets every day.;activo
+652;New planets are being discovered every day.;pasivo
+653;Businesses are creating new jobs every month.;activo
+654;New jobs are being created every month.;pasivo
+655;A laboratory in Sweden has created a new medicine.;activo
+656;A new medicine has been created in a laboratory in Sweden.;pasivo
+657;Mr Thompson has sold seven cars this month.;activo
+658;Seven cars have been sold this month.;pasivo
+659;The political parties have formed a new government in South Africa.;activo
+660;A new government has been formed in South Africa;pasivo
+661;The cake will be eaten by Walter;pasivo
+662;The mail is delivered by Andy every day;pasivo
+663;The city was captured by the enemy;pasivo
+664;His house was destroyed by the fire;pasivo
+665;The doll house was built by Susana;pasivo
+666;Susana built the doll house;activo
+667;We were questioned by the police;pasivo
+668;The letter will be written by the manager;pasivo
+669;John writes the letter;activo
+670;The letter is written by John;pasivo
+671;John is writing the letter;activo
+672;Jim will write a letter.;activo
+673;A letter will be written by Jim.;pasivo
+674;Jim has written a letter;activo
+675;A letter has been written by Jim.;pasivo
+676;The letter has been sent by my father;pasivo
+677;Two suspects have been arrested by police;pasivo
+678;The war was followed by a political crisis;pasivo
+679;The money was returned by Kelly;pasivo
+680;The thief was captured by the police;pasivo
+681;Alex posted the video on Facebook.;activo
+682;The video was posted on Facebook by Alex.;pasivo
+683;The director will give you instructions.;activo
+684;Instructions will be given to you by the director.;pasivo
+685;Thousands of tourists view the Grand Canyon every year.;activo
+686;My purse has been stolen;activo
+687;Somebody has stolen my purse;pasivo
+688;The patients were looked after;activo
+689;A house is built by Francis;pasivo
+690;The contract has been signed by Charles;pasivo
+691;Allan had already stolen the car when the police arrived;activo
+692;The car had already been stolen by Allan when the police arrived;pasivo
+693;A beautiful dinner is going to be made by Sally tonight;pasivo
+694;John will be washing the dishes;activo
+695;The dishes will be being washed by John;pasivo
+696;John is going to be washing the dishes;activo
+697;The dishes are going to be being washed by John;pasivo
+698;They will have completed the project before the deadline;activo
+699;The project will have been completed before the deadline;pasivo
+700;They are going to have completed the project before the deadline;activo
+701;The project is going to have been completed before the deadline;pasivo
+702;The famous artist will have been painting the mural for over six months by the time it is finished;activo
+703;The mural will have been being painted by the famous artist for over six months by the time it is finished;pasivo
+704;The famous artist is going to have been painting the mural for over six months by the time it is finished;activo
+705;The mural is going to have been being painted by the famous artist for over six months by the time it is finished;pasivo
+706;He ate all of the cookies;activo
+707;All of the cookies were eaten.;pasivo
+708;Mark Twain wrote the book;activo
+709;The book was written by Mark Twain.;pasivo
+710;The housekeeper will clean the room.;activo
+711;The room will be cleaned by the housekeeper.;pasivo
+712;Francis builds a house;activo
+713;A house is built by Francis;pasivo
+714;Pierre is making a lemon pie;activo
+715;A lemon pie is being made by Pierre;pasivo
+716;Helen wrote a history book;activo
+717;A history book was written by Helen;pasivo
+718;The doll house was built by Susana;pasivo
+719;The letter will be written by the manager.;pasivo
+720;We were questioned by the police;pasivo
+721;Peter was making dinner;activo
+722;Dinner was being made by Peter;pasivo
+723;Susan will send the email tonight;activo
+724;They buy the house;activo
+725;They are buying the house;activo
+726;They bought the house;activo
+727;They were buying the house;activo
+728;They bought the house;activo
+729;They were buying the house;activo
+730;They have bought the house;activo
+731;They will have bought the house;activo
+732;They have bought the house;activo
+733;They had bought the house;activo
+734;They has to buy the house;activo
+735;They should have bought the house;activo
+736;They will buy the house;activo
+737;They are going to buy the house;activo
+738;They can buy the house;activo
+739;They has to buy the house;activo
+740;They should have bought the house;activo
+741;Charles has signed the contract;activo
+742;The contract has been signed by Charles;pasivo
+743;An emergency call was received by the police late last night.;pasivo
+744;An emergency call was received by Officer Ryan.;pasivo
+745;A young child was taken by a stranger.;pasivo
+746;The victim was found by a neighbor.;pasivo
+747;The child was hugged by her mother.;pasivo
+748;Cambridge University Press published this book.;activo
+749;Edward Barnes designed these houses in the 1880s.;activo
+750;Elders in the Inupiat community tell stories because other members of the community see them as most wise.;activo
+751;Scientists are doing continuous research to improve the set process as well as understand genes.;activo
+752;My professor appreciated my question.;activo
+753;Maneesha ate the apple.;activo
+754;Wind disperses plant seeds.;activo
+755;We have analyzed the results.;activo
+756;The theatre company will perform a Shakespearean play next week.;activo
+757;Officials will not allow schoolchildren to go to school.;activo
+758;Students made mistakes with the passive voice.;activo
+759;The Union Army defeated the Confederacy in 1865.;activo
+760;The Supreme Court declared the National Industrial Recovery Act unconstitutional in 1935.;activo
+761;People drink champagne on New Year’s Eve.;activo
+762;Chefs use these machines to mix the ingredients.;activo
+763;They renovated the restaurant in 2004.;activo
+764;his book was published by Cambridge University Press.;pasivo
+765;These works were made by a Mexican artist.;pasivo
+766;My question was appreciated by the professor.;pasivo
+767;The apple was eaten by Maneesha.;pasivo
+768;Plant seeds are dispersed by wind.;pasivo
+769;The Confederacy was defeated in 1865.;pasivo
+770;Mistakes were made with the passive voice.;pasivo
+771;The National Industrial Recovery Act was declared unconstitutional in 1935.;pasivo
+772;The metropolis has been scorched by the dragon’s fiery breath.;pasivo
+773;The restaurant was renovated in 2004.;pasivo
+774;The students were informed that the class had been cancelled.;pasivo
+775;Pancakes were eaten by the fox.;pasivo
+776;Dinner is being eaten by him.;pasivo
+777;Today a test was taken by the fox.;pasivo
+778;Spanish is spoken by many foxes.;pasivo
+779;Pet foxes are owned by very few people.;pasivo
+780;He bit my hand.;activo
+781;The dog burned the popcorn.;activo
+782;Emilio is writing a book.;activo
+783;I am making a cake.;activo
+784;He opens the door.;activo
+785;We set the table.;activo
+786;She pays a lot of money.;activo
+787;I draw a picture.;activo
+788;They wear blue shoes.;activo
+789;They don't help you.;activo
+790;He doesn't open the book.;activo
+791;You do not write the letter.;activo
+792;The party has already started.;activo
+793;The car is standing at the garage.;activo
+794;The police didn't find the robber last week.;activo
+795;The train is going to arrive late.;activo
+796;The friends have been looking forward to meeting her.;activo
+797;The Government is planning a new road near my house.;activo
+798;My grandfather built this house in 1943.;activo
+799;Picasso was painting Guernica at that time.;activo
+800;The cleaner has cleaned the office.;activo
+801;He had written three books before 1867.;activo
+802;John will tell you later.;activo
+803;By this time tomorrow we will have signed the deal.;activo
+804;Somebody should do the work.;activo
+805;The English established the colonies 200 years ago.;activo
+806;The popcorn was burned by the dog.;pasivo
+807;My hand was bitten.;pasivo
+808;The book was written in by Emilio.;pasivo
+809;The pizza was cooked by my mother.;pasivo
+810;This cake was made with honey.;pasivo
+811;He teaches English.;activo
+812;The child is eating bananas.;activo
+813;She is writing a letter.;activo
+814;We thanked our sponsors.;activo
+815;Everyone loves my dog.;activo
+816;Radha has painted this picture.;activo
+817;The police arrested the burglar.;activo
+818;We thanked our sponsors.;activo
+819;Bananas are being eaten by the child.;pasivo
+820;A letter is being written by her.;pasivo
+821;The servant was punished by the master.;pasivo
+822;A book was being written by him.;pasivo
+823;Meal is cooked by someone every day.;pasivo
+824;A blue shirt was worn by him.;pasivo
+825;A house is being built by them.;pasivo
+826;The job has been finished by me.;pasivo
+827;A diamond necklace was bought by her.;pasivo
+828;Please close the door.;activo
+829;Please inform your parents about the fee.;activo
+830;Drink sufficient water daily;activo
+831;Write neatly in your application form.;activo
+832;Pack this gift.;activo
+833;The president made some mistakes.;activo
+834;People know the truth behind lying.;activo
+835;Students are writing the book.;activo
+836;I threw the book.;activo
+837;She is reading the newspaper in the living room.;activo
+838;You are working very hard.;activo
+839;They are playing in the park.;activo
+840;She is doing the work of two people.;activo
+841;He is speaking German.;activo
+842;The plane is leaving the airport.;activo
+843;He is playing in the park.;activo
+844;They are selling books there.;activo
+845;They are playing chess.;activo
+846;The boy is crying because his toy is broken.;activo
+847;The telephone is ringing.;activo
+848;Someone is knocking the door.;activo
+849;Wine is made.;pasivo
+850;Grapes are grown.;pasivo
+851;Wine is being made.;pasivo
+852;Grapes are being grown.;pasivo
+853;Wine has been made.;pasivo
+854;Grapes have been grown.;pasivo
+855;Wine was made.;pasivo
+856;Grapes were grown.;pasivo
+857;Wine was being made.;pasivo
+858;Grapes were being grown.;pasivo
+859;Wine had been made.;pasivo
+860;Grapes had been grown.;pasivo
+861;Wine will be made.;pasivo
+862;Grapes will be grown.;pasivo
+863;Wine will have been made.;pasivo
+864;Grapes will have been grown.;pasivo
+865;You worked very hard last week.;activo
+866;She lived in Japan last year.;activo
+867;They learned how to swim two years ago.;activo
+868;She liked to sit in the sun.;activo
+869;He always walked to school.;activo
+870;I painted my house last weekend.;activo
+871;Mr. Green worked with my uncle.;activo
+872;I married Kelly last year.;activo
+873;He worked in his garden yesterday.;activo
+874;He studied for his English class.;activo
+875;You watched television every night.;activo
+876;They talked on the phone last week.;activo
+877;She wanted to learn French.;activo
+878;They worked together for many years.;activo
+879;She wished to learn Italian;activo
+880;He lived in Boston.;activo
+881;You studied in my class last semester.;activo
+882;We listened music until ten o’clock last night;activo
+883;She wanted to visit London.;activo
+884;He watched television until twelve o’clock last night;activo
+885;She smoked a lot.;activo
+886;He answered all the questions.;activo
+887;She waited almost an hour for you.;activo
+888;I mentioned it to you many times.;activo
+889;She needed to speak English in order to get a better job.;activo
+890;You arrived ten minutes late.;activo
+891;The employee fixed the mistake.;activo
+892;My car was stolen last night.;pasivo
+893;That house was built in the 1920s.;pasivo
+894;The film “Titanic” was directed by James Cameron.;pasivo
+895;War and Peace was written in 1869.;pasivo
+896;These shoes were made in Italy.;pasivo
+897;The package was delivered yesterday afternoon.;pasivo
+898;That photo was taken by my father.;pasivo
+899;Gold was found in California in 1849.;pasivo
+900;That house was built in the 19th century.;pasivo
+901;He was fired from his job.;pasivo
+902;This song was originally written by Paul Simon.;pasivo
+903;It was recorded in 1971 in a studio in Manhattan.;pasivo
+904;These chickens were raised by my uncle Henry.;pasivo
+905;These shoes were made in Mallorca.;pasivo
+906;Pedro was born in Toledo.;pasivo
+907;This house was built by my mother.;pasivo
+908;Washington was bombed by Pakistan.;pasivo
+909;A letter was written by Tom.;pasivo
+910;The keys were lost by my sister.;pasivo
+911;The lesson was studied by my brother.;pasivo
+912;All of the cookies were eaten.;pasivo
+913;The apple was cut.;pasivo
+914;the room was painted by her;pasivo
+915;that show was given by the actress;pasivo
+916;the dinner was made by melanie;pasivo
+917;You were working very hard yesterday.;activo
+918;They were playing in the park.;activo
+919;She was doing the work of two people.;activo
+920;He was speaking German.;activo
+921;The plane was leaving the airport.;activo
+922;He was playing in the park.;activo
+923;They were selling books there.;activo
+924;They were playing chess.;activo
+925;The boy was crying because his toy is broken.;activo
+926;The telephone was ringing.;activo
+927;He was knocking the door.;activo
+928;They were waiting for you.;activo
+929;It was raining.;activo
+930;He was sleeping.;activo
+931;She was cleaning the room.;activo
+932;She was looking for the book which she lost.;activo
+933;He was taking a bath.;activo
+934;I was fixing the machine.;activo
+935;We were planning a party.;activo
+936;They were eating in the restaurant on the corner.;activo
+937;I mixed the hydrochloric acid with 25 grams of zinc pellets.;activo
+938;Julie tripped the professor.;activo
+939;My teacher always gives difficult assignments.;activo
+940;I inserted the glass tubing into the rubber stopper.;activo
+941;The hydrochloric acid was mixed by me with 25 grams of zinc pellets.;pasivo
+942;The glass tubing was inserted into the rubber stopper.;pasivo
+943;The professor was tripped by Julie.;pasivo
+944;Difficult assignments are always given by my teacher.;pasivo
+945;Alexander Fleming discovered penicillin in 1928;activo
+946;Penicillin was discovered by Alexander Fleming in 1928.;pasivo
+947;Carry it home.;activo
+948;Do it at once.;activo
+949;Open the door.;activo
+950;Throw the ball.;activo
+951;The solution was mixed thoroughly.;pasivo
+952;The professor gave the students the books.;activo
+953;The professor gave the books to the students.;activo
+954;The seashell was found by the girl in the white hat;pasivo
+955;The movie was enjoyed by all;pasivo
+956;The decorations for the party were created by Jessica;pasivo
+957;The phone was left in the car;pasivo
+958;The vase was broken;pasivo
+959;The toy was chewed by the dog;pasivo
+960;The stuffed animal was well loved by the little girl;pasivo
+961;The laundry is always done by Mom;pasivo
+962;These cookies were baked at the grocery store bakery;pasivo
+963;It is believed by the president that the changing of the by-laws should be placed on the agenda.;pasivo
+964;The president believes that the secretary must place the by-law changes on the agenda.;activo
+965;We were cheered by the news that the faculty meeting was canceled by the dean because of the winter storm.;pasivo
+966;The dean canceled the faculty meeting because of the winter storm.;activo
+967;Sam repaired the car.;activo
+968;The car was repaired by Sam.;pasivo
+969;Many tourists have visited that castle.;activo
+970;That castle has been visited by many tourists.;pasivo
+971;Hamlet was written by Shakespeare.;pasivo
+972;Shakespeare wrote Hamlet.;activo
+973;The book is being read by most of the class.;pasivo
+974;Most of the class is reading the book;activo
+975;Experiments have been conducted to test the hypothesis.;pasivo
+976;Your bicycle has been damaged.;pasivo
+977;Someone damaged your bicycle.;activo
+978;The brakes were slammed on by her as the car sped down the hill.;pasivo
+979;She slammed the brakes as the car sped down the hill.;activo
+980;Action on the bill is being considered by the committee.;pasivo
+981;The committee is considering action on the bill.;activo
+982;I will teach;activo
+983;I will learn;activo
+984;I teach;activo
+985;I learn.;activo
+986;I taught;activo
+987;I learned.;activo
+988;The door is blue.;activo
+989;This could be the first day of the rest of my life.;activo
+990;She might have been very nice.;activo
+991;The rate of evaporation is controlled by the size of an opening.;pasivo
+992;The size of an opening controls the rate of evaporation.;activo
+993;The lady plays the piano.;activo
+994;The driver drove the car.;activo
+995;The piano is played by the lady.;pasivo
+996;The car was driven by the driver.;pasivo
+997;The puppy tore at the stuffed animal until it got the squeaker out.;activo
+998;The waves pounded on the dunes during the storm.;activo
+999;That race car was driven by Mario Andretti.;pasivo
+1000;That painting was painted by one of my students.;pasivo

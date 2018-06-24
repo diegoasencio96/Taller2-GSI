@@ -20,31 +20,52 @@ import javax.swing.table.DefaultTableModel;
  * @author lenovo-G40
  */
 public class Ventana2Controlador implements ActionListener {
-    JLabel ltiempo;
+    JLabel ltiempo, llineas, laciertos, lporcentaje;
     public JScrollPane scroll;
     public JTable tabla;
     public String res;
     public DefaultTableModel modelo;
+    public int naciertos, nlineas;
+    public double porcentaje_aciertos;
     
-    public Ventana2Controlador(Ventana2 v2, String res, float tiempo) {
+    public Ventana2Controlador(Ventana2 v2, String res, float tiempo, int nlineas, int naciertos, double porcentaje_aciertos) {
         this.scroll = v2.scroll;
         this.tabla = v2.tabla;
         this.ltiempo = v2.ltiempo;
+        this.llineas = v2.llineas;
+        this.laciertos = v2.laciertos;
+        this.lporcentaje = v2.lporcentaje;        
         this.res = res;
+        this.nlineas = nlineas;
+        this.naciertos = naciertos;
+        this.porcentaje_aciertos = porcentaje_aciertos;
         
         ltiempo.setText(ltiempo.getText()+" "+Float.toString(tiempo)+" seg");
-        Vector columnas = new Vector();
-        columnas.add("Frase en ingles");
-        columnas.add("Resultado");
+        llineas.setText("Numero de lineas:  "+this.nlineas);
+        laciertos.setText("Numero de aciertos:  "+this.naciertos);
+        lporcentaje.setText("Porcentaje de aciertos:  "+this.porcentaje_aciertos+" %");
         
-        modelo = new DefaultTableModel(null,columnas);
         //System.out.println(res);
         String aux[] = res.split("\n");
         
-        for(int i=0;i<aux.length;i++) {
+        Vector columnas = new Vector();
+       
+        String[] arr = aux[0].split("-----");
+        columnas.add(arr[0]);
+        columnas.add(arr[1]);
+        columnas.add(arr[2]);
+        columnas.add(arr[3]);
+       
+        modelo = new DefaultTableModel(null,columnas);
+        
+        for(int i=1;i<aux.length;i++) {
             Vector fila = new Vector();
-            fila.add(aux[i].split("-----")[0]);
-            fila.add(aux[i].split("-----")[1]);
+            
+            String[] arr1 = aux[i].split("-----");
+            fila.add(arr1[0]);
+            fila.add(arr1[1]);
+            fila.add(arr1[2]);
+            fila.add(arr1[3]);
             modelo.insertRow(modelo.getRowCount(),fila);
         }
         

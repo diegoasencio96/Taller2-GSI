@@ -43,12 +43,16 @@ import java.util.regex.Pattern;
 public class Ventana1Controlador implements ActionListener {
     
     private Ventana1 obj;
-    private long tfinal;
-    private long tinicio;
+    private float tfinal;
+    private float tinicio;
     private ForkJoinPool forkJoinPool;
     private TokenizerME tokenizer;
     private POSModel posModel;
     private POSTaggerME posTagger;
+    
+    private int naciertos = 0;
+    private int nlineas = 0;
+    private double porcentaje_acierto = 0.0;
     
     
     public String sentenceDetect(String paragraph) {
@@ -67,9 +71,9 @@ public class Ventana1Controlador implements ActionListener {
         Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");        
         
         // Validar voz pasiva (to be + verbo)
-        for (int i=0;i<tags.length;i++) {
+        /*for (int i=0;i<tags.length;i++) {
             System.out.println(tags[i]);   
-        }
+        }*/
         for (int i=0;i<tags.length-3;i++) {
             
             Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);            
@@ -112,6 +116,10 @@ public class Ventana1Controlador implements ActionListener {
         String aux="";   
         String texto="";
         File abre = null;
+        naciertos = 0;
+        nlineas = 0;
+        porcentaje_acierto = 0.0;
+        
         try {
             JFileChooser file=new JFileChooser();
             file.showOpenDialog(obj);
@@ -123,10 +131,22 @@ public class Ventana1Controlador implements ActionListener {
                FileReader archivos=new FileReader(abre);
                BufferedReader lee=new BufferedReader(archivos);
                tinicio = System.currentTimeMillis();
-               ArrayList<String> arr = new ArrayList();
+               //ArrayList<String> arr = new ArrayList();
                while((aux=lee.readLine())!=null)
                {
-                   texto += (aux+"-----"+sentenceDetect(aux)+ "\n");//arr.add(aux);
+                   //System.out.println();
+                   nlineas += 1;
+                   String[] arrl = aux.split(";");
+                   if(arrl[2].equals(sentenceDetect(arrl[1]))) {
+                       naciertos+=1;
+                   }
+                   if (c == 0) {
+                       texto += (arrl[0]+"-----"+arrl[1]+"-----"+arrl[2]+"-----"+"Resultado"+ "\n");//arr.add(aux);
+                       c++;
+                   }else {
+                       texto += (arrl[0]+"-----"+arrl[1]+"-----"+arrl[2]+"-----"+sentenceDetect(arrl[1])+ "\n");//arr.add(aux);
+                   }
+                   
                }
                lee.close();
                //String result = forkJoinPool.invoke(new Auxiliar(this, arr, 0, arr.size()));
@@ -141,6 +161,8 @@ public class Ventana1Controlador implements ActionListener {
         //JOptionPane.showMessageDialog(null, texto);
         //System.out.println(texto);
         tfinal = System.currentTimeMillis();
+        if(nlineas > 0) porcentaje_acierto = (naciertos*100)/nlineas;
+        else porcentaje_acierto = 0;
         //JOptionPane.showMessageDialog(null, "Se ha terminado de leer los datos del archivo!!.");
         return texto;//El texto se almacena en el JTextArea
     }
@@ -227,7 +249,7 @@ public class Ventana1Controlador implements ActionListener {
                  JOptionPane.showMessageDialog(null, "No selecciono un archivo");
             }else {
                 Ventana2 v2 = new Ventana2();
-                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal-tinicio)/1000);
+                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal-tinicio)/1000, nlineas, naciertos, porcentaje_acierto);
             }
         }
     

@@ -18,7 +18,7 @@ import javax.swing.JTable;
  */
 public class Ventana2 extends JFrame {
     
-    public JLabel text, ltiempo;
+    public JLabel text, ltiempo, llineas, laciertos, lporcentaje;
     public JTable tabla;
     public JScrollPane scroll;
     
@@ -48,11 +48,26 @@ public class Ventana2 extends JFrame {
        
         ltiempo = new JLabel();
         ltiempo.setText("Tiempo de ejecucion en segundos: ");
-        ltiempo.setBounds(10, 480, 250, 30);
+        ltiempo.setBounds(10, 450, 300, 50);
+        
+        llineas = new JLabel();
+        llineas.setText("Numero de lineas : ");
+        llineas.setBounds(10, 470, 300, 50);
+        
+        laciertos = new JLabel();
+        laciertos.setText("Numero de aciertos: ");
+        laciertos.setBounds(10, 490, 300, 50);
+        
+        lporcentaje = new JLabel();
+        lporcentaje.setText("Porcentaje de aciertos: ");
+        lporcentaje.setBounds(10, 510, 300, 50);
         
         add(text);
         add(scroll);
         add(ltiempo);
+        add(llineas);
+        add(laciertos);
+        add(lporcentaje);
 
     }
     
