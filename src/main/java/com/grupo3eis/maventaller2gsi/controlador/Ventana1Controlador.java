@@ -43,8 +43,8 @@ import java.util.regex.Pattern;
 public class Ventana1Controlador implements ActionListener {
 
     private Ventana1 obj;
-    private float tfinal;
-    private float tinicio;
+    private long tfinal;
+    private long tinicio;
     private ForkJoinPool forkJoinPool;
     private TokenizerME tokenizer;
     private POSModel posModel;
@@ -69,9 +69,9 @@ public class Ventana1Controlador implements ActionListener {
         Pattern tagsPrepos = Pattern.compile("^by$|^on$|^to$");
 
         // Validar voz pasiva (to be + verbo)
-        for (int i = 0; i < tags.length; i++) {
+        /*for (int i = 0; i < tags.length; i++) {
             System.out.println(tags[i]);
-        }
+        }*/
         for (int i = 0; i < tags.length - 3; i++) {
 
             Matcher formasToBe = tagsFormasToBe.matcher(tokens[i]);
@@ -84,14 +84,6 @@ public class Ventana1Controlador implements ActionListener {
                 }
             } else if (formasToBe.matches()) {
                 Matcher verbos = tagsVerbos.matcher(tags[i + 1]);
-
-                /*
-                    DT
-                    NNS
-                    VBP
-                    VBN
-                    VBN
-                 */
                 if (verbos.matches()) {
                     Matcher preposiciones = tagsPrepos.matcher(tokens[i + 2]);
                     if (preposiciones.matches()) {
@@ -173,7 +165,7 @@ public class Ventana1Controlador implements ActionListener {
         //System.out.println(texto);
         tfinal = System.currentTimeMillis();
         if (nlineas > 0) {
-            porcentaje_acierto = (naciertos * 100) / nlineas;
+            porcentaje_acierto = (naciertos * 100) / (nlineas-1);
         } else {
             porcentaje_acierto = 0;
         }
@@ -222,7 +214,7 @@ public class Ventana1Controlador implements ActionListener {
             // this.obj.tffrase.setText("This is a statement. This is another statement. Now is an abstract word for time, that is always flying.");
             this.obj.tffrase.setText("John is 27 years old.");
             int nThreads = Runtime.getRuntime().availableProcessors();
-            System.out.println("Numero de Procesadores: " + nThreads);
+            //System.out.println("Numero de Procesadores: " + nThreads);
             forkJoinPool = new ForkJoinPool(nThreads);
             //String sentence = "John is 27 years old.";
             is1 = new FileInputStream("src/main/java/com/grupo3eis/maventaller2gsi/modelsopennlp/en-token.bin");
@@ -262,8 +254,12 @@ public class Ventana1Controlador implements ActionListener {
             if (arc == null || arc.equals("")) {
                 JOptionPane.showMessageDialog(null, "No selecciono un archivo");
             } else {
+                System.out.println((tfinal));
+                System.out.println((tinicio));
+                System.out.println((tfinal - tinicio));
+                System.out.println((tfinal - tinicio) / 1000);
                 Ventana2 v2 = new Ventana2();
-                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal - tinicio) / 1000, nlineas, naciertos, porcentaje_acierto);
+                Ventana2Controlador vc2 = new Ventana2Controlador(v2, arc, (tfinal - tinicio), nlineas, naciertos, porcentaje_acierto);
             }
         }
 

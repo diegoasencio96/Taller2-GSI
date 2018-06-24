@@ -48,7 +48,7 @@ public class Ventana2 extends JFrame {
        
         ltiempo = new JLabel();
         ltiempo.setText("Tiempo de ejecucion en segundos: ");
-        ltiempo.setBounds(10, 450, 300, 50);
+        ltiempo.setBounds(10, 450, 600, 50);
         
         llineas = new JLabel();
         llineas.setText("Numero de lineas : ");

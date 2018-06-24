@@ -28,7 +28,7 @@ public class Ventana2Controlador implements ActionListener {
     public int naciertos, nlineas;
     public double porcentaje_aciertos;
     
-    public Ventana2Controlador(Ventana2 v2, String res, float tiempo, int nlineas, int naciertos, double porcentaje_aciertos) {
+    public Ventana2Controlador(Ventana2 v2, String res, long tiempo, int nlineas, int naciertos, double porcentaje_aciertos) {
         this.scroll = v2.scroll;
         this.tabla = v2.tabla;
         this.ltiempo = v2.ltiempo;
@@ -40,7 +40,7 @@ public class Ventana2Controlador implements ActionListener {
         this.naciertos = naciertos;
         this.porcentaje_aciertos = porcentaje_aciertos;
         
-        ltiempo.setText(ltiempo.getText()+" "+Float.toString(tiempo)+" seg");
+        ltiempo.setText(ltiempo.getText()+" "+tiempo+" milisegundos"+" ó "+Float.toString(tiempo/1000)+" segundos");
         llineas.setText("Numero de lineas:  "+this.nlineas);
         laciertos.setText("Numero de aciertos:  "+this.naciertos);
         lporcentaje.setText("Porcentaje de aciertos:  "+this.porcentaje_aciertos+" %");
